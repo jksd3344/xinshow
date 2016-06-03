@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+.input-group
+{
+	width: 500px;
+	float: left;
+}	
+</style>
+
+<body>
+          	<!--包裹form部分div-->
+            <div class="panel-body">
+                <form  method="post">
+                    <!--用户名-->
+                    <div class="form-group">
+		<textarea class="form-control" id="f_url" rows="3" style="width:79%"></textarea>
+	       </div>
+                    <!--提交按钮-->
+                    <button type="button" class="btn btn-success" id="sub" style="width:100px;margin-left:10px;" onclick="add()">add url</button>
+                </form>
+            </div>
+
+            {%for i in File_Path%}
+	<div class="form-group" >
+		<div class="col-sm-10" style="margin-top:5px;">
+			<input class="form-control" id="add" type="text" placeholder='{{i.n }}行 : {{i.line}}' name="urls" style="width:95%;float:left">
+			<button type="button" class="btn btn-danger" style="float:right" onclick="dele_s('{{i.n}}')">delete</button>
+		</div>
+	</div>
+	{%endfor%}
+
+</body>
+<script type="text/javascript">
+
+	function add()
+	{
+		var file_url = $("#f_url").val();
+		alert(file_url);
+		$.ajax({
+			url:'/z_FileShow/File_detach/',
+			type:"post",
+			data:{'file_url':file_url},
+			success:function(msg){
+				if(msg==200)
+				{
+					alert("add_success");
+					window.location.reload()				
+				}else if(msg==500)
+				{
+					alert("格式错误");
+				}
+				else
+				{
+					alert("error_by_add");
+				}
+
+			}
+		})
+	}
+
+	function dele_s(num)
+	{
+		alert(num);
+		$.ajax({
+			url:'/z_FileShow/dele_file/',
+			type:'post',
+			data:{"num":num},
+			success:function(msg)
+			{
+				if(msg)
+				{
+					alert("delete_success");
+					window.location.reload()
+				}else
+				{
+					alert("error_by_delete");
+				}
+
+			}
+		})
+	}
+
+</script>
+</html>
