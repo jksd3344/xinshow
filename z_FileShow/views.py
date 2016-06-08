@@ -17,7 +17,7 @@ class JsonRes(HttpResponse):
             status=status,
             content_type=content_type)
 
-# 文件处理
+'''文件处理'''
 class ApplicationClass(object):
 	def __init__(self):
 		#初始化文件地址
@@ -53,7 +53,7 @@ class ApplicationClass(object):
 		TestFile.close()
 		return 1
 
-	#删除指定一行
+	#删除指定一行,返回删除后列表
 	def File_delete_line(self,Num):
 		filr_w = []
 		TestFile = open(self.File_Name,'r')
@@ -71,7 +71,7 @@ class ApplicationClass(object):
 
 		TestFile.close()
 		return filr_w
-#读入文件
+'''读入文件'''
 def show(request):
 	size = 10
 	faction = ApplicationClass()
@@ -116,7 +116,7 @@ def File_detach(request):
 		show = 200
 		return JsonRes(json.dumps(show))
 
-# 删除文件
+'''删除文件'''
 def dele_file(request):
 	num = int(request.POST.get("num","").encode())
 	# 接收num

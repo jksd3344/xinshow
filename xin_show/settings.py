@@ -12,6 +12,16 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from celery import Celery
+
+celery = Celery(broker='redis://localhost:6379/0')
+
+celery.conf.update(
+    CELERY_DEFAULT_QUEUE = "myapp",
+    CELERY_DEFAULT_EXCHANGE = "myapp",
+    CELERY_DEFAULT_EXCHANGE_TYPE = "direct",
+    CELERY_DEFAULT_ROUTING_KEY = "myapp",
+)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))).replace('\\', '/')
 TEMPLATES_PATH = os.path.join(BASE_DIR, 'templates')
@@ -32,6 +42,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'djcelery',
+    'kombu.transport.django',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,8 +51,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'z_FileShow',
-    'z_ReFile'
+    'z_ReFile',
+    '_models'
 )
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -76,14 +90,14 @@ WSGI_APPLICATION = 'xin_show.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
+import codecs
 DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'who',
-            'HOST': 'localhost',
+            'NAME': 'Shake',
+            'HOST': '123.57.226.182',
             'USER': 'root',
-            'PASSWORD': 'jksd3344',
+            'PASSWORD': 'Jksd3344',
             'PORT': '3306',
         },
 }

@@ -86,14 +86,21 @@
 		Etime = $("#Etime").val();
 		ucid   = $("#ucid").val();
 		oid     = $("#oid").val();
-
+		Remarks     = $("#remarks").val();
 		$.ajax({
 			url:"/z_ReFile/takemassage/",
 			type:"post",
-			data:{"Stime":Stime,"Etime":Etime,"ucid":ucid,"oid":oid},
+			data:{"Stime":Stime,"Etime":Etime,"ucid":ucid,"Remarks":Remarks,"oid":oid},
 			success:function(msg)
 			{
-				alert(msg);
+				if(msg==200)
+				{
+					window.location.href="http://127.0.0.1:8000/z_ReFile/Runmsg"					
+				}else if(msg=500)
+				{
+					alert("开始时间必须小于结束时间")
+				}
+
 			}
 		})
 

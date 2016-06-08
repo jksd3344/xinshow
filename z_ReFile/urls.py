@@ -7,4 +7,5 @@ from z_ReFile import views
 urlpatterns = patterns(' ',
 		url(r'^index/$',views.index,name='index'),
 		url(r'^takemassage/$',views.takemassage,name='takemassage'),
+		url(r'^Runmsg/$',views.Runmsg,name='Runmsg'),
 	)
