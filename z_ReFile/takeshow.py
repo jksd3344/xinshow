@@ -21,9 +21,9 @@ class TakeShow(object):
 		self.Stime          = ""
 		self.Etime          = ""
 		self.ShowDays       = datetime.datetime.now()
-		self.bin0           = "/home/zzg/coopinion/lemur-4.11/site-search/oopin_cgi_ctr_v2/bin"
-		self.bin1           = "/home/zzg/coopinion/lemur-4.11/site-search/oopin_cgi_ctr_v2/bin_1"
-		self.bin2           = "/home/zzg/coopinion/lemur-4.11/site-search/oopin_cgi_ctr_v2/bin_2"
+		self.bin1           = "/home/zzg/coopinion/lemur-4.11/site-search/oopin_cgi_ctr_v2/bin"
+		self.bin2           = "/home/zzg/coopinion/lemur-4.11/site-search/oopin_cgi_ctr_v2/bin_1"
+		self.bin3           = "/home/zzg/coopinion/lemur-4.11/site-search/oopin_cgi_ctr_v2/bin_2"
 		self.sqlcom         = "update feedgo set comprogress=(comprogress+1) where userid=%s"
 		self.sqlwh          = "update feedgo set Whether=1 where userid=%s"
 		self.hostid         = 0
@@ -96,8 +96,12 @@ class TakeShow(object):
 				print("self.host1%s"%self.host1)
 				self.remote_execute(self.host1)
 			elif self.hostid==2:
+				self.cmd2 = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(self.oid))
+				self.host2["cmd"]=self.cmd2
 				self.remote_execute(self.host2)
 			elif self.hostid==3:
+				self.cmd3 = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(self.oid))
+				self.host3["cmd"]=self.cmd3
 				self.remote_execute(self.host3)
 
 			com = db.execute(self.sqlcom)
