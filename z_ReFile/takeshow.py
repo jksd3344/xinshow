@@ -43,8 +43,9 @@ class TakeShow(object):
 			self.hostid  = int((self.pat)[6])
 			self.sqlcom  = self.sqlcom%(self.uid)
 			self.sqlwh   = self.sqlwh%(self.uid)
-			self.cmd     = "cd %s:./adhoc_ctr_feeding.o','1',%s,%s,%s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(self.oid))
+			self.cmd     = "cd %s:./adhoc_ctr_feeding.o','1',%s,%s,%s,%s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(self.oid))
 			print("self.cmd%s"%self.cmd)
+			"cd /home/zzg/coopinion/lemur-4.11/site-search/oopin_cgi_ctr_v2/bin_1:./adhoc_ctr_feeding.o','1',22,2016-06-08 09:17:01.29099"
 			self.host1   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":"cd /home/itcast/testy;./sleepTest.o"}
 			self.host2   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":"cd /home/itcast/testy;./sleepTest.o"}
 			self.host3   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":"cd /home/itcast/testy;./sleepTest.o"}
@@ -88,7 +89,7 @@ class TakeShow(object):
 			print("success+id=%s"%self.hostid)
 			days = datetime.timedelta(days=i)
 			self.ShowDays = (Etime-days).strftime("%Y-%m-%d")
-			
+			print("self.ShowDays=%s"%self.ShowDays)
 			#通过hostid确定执行的命令和主机ip
 			if self.hostid==1:
 				self.remote_execute(self.host1)
