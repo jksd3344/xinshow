@@ -31,7 +31,6 @@ class TakeShow(object):
 		self.host2          = {}
 		self.host3          = {}
 
-
 	'''初始化参数'''
 	def TakePat(self):
 		try:
@@ -44,8 +43,6 @@ class TakeShow(object):
 			self.hostid  = int((self.pat)[6])
 			self.sqlcom  = self.sqlcom%(self.uid)
 			self.sqlwh   = self.sqlwh%(self.uid)
-			self.cmd     = 'cd /home/zzg/coopinion/lemur-4.11/site-search/oopin_cgi_ctr_v2/bin_1;./adhoc_ctr_feeding.o','1',str(self.ucid),str(self.ShowDays),str(self.oid)
-			print ("self.cmd=%s"%self.cmd)
 			self.host1   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":"cd /home/itcast/testy;./sleepTest.o"}
 			self.host2   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":"cd /home/itcast/testy;./sleepTest.o"}
 			self.host3   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":"cd /home/itcast/testy;./sleepTest.o"}
@@ -68,7 +65,7 @@ class TakeShow(object):
 			username = hostmsg.get("username",""),
 			password = hostmsg.get("password",""),
 			)
-		# subprocess.call(['/home/itcast/0420text/djantext/xinshow/z_ReFile/sleepTest.o','1',str(self.ucid),str(self.ShowDays),str(self.oid)])
+		
 		stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
 		for i in stdout:
 			print("stdout=%s"%i)
