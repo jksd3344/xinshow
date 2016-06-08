@@ -12,16 +12,16 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-from celery import Celery
+# from celery import Celery
 
-celery = Celery(broker='redis://localhost:6379/0')
+# celery = Celery(broker='redis://localhost:6379/0')
 
-celery.conf.update(
-    CELERY_DEFAULT_QUEUE = "myapp",
-    CELERY_DEFAULT_EXCHANGE = "myapp",
-    CELERY_DEFAULT_EXCHANGE_TYPE = "direct",
-    CELERY_DEFAULT_ROUTING_KEY = "myapp",
-)
+# celery.conf.update(
+#     CELERY_DEFAULT_QUEUE = "myapp",
+#     CELERY_DEFAULT_EXCHANGE = "myapp",
+#     CELERY_DEFAULT_EXCHANGE_TYPE = "direct",
+#     CELERY_DEFAULT_ROUTING_KEY = "myapp",
+# )
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))).replace('\\', '/')
 TEMPLATES_PATH = os.path.join(BASE_DIR, 'templates')
