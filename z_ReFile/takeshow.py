@@ -43,10 +43,7 @@ class TakeShow(object):
 			self.uid     = (self.pat)[5]
 			self.hostid  = int((self.pat)[6])
 			self.sqlcom  = self.sqlcom%(self.uid)
-			self.sqlwh   = self.sqlwh%(self.uid)
-
-			print("self.cmd%s"%self.cmd)
-	
+			self.sqlwh   = self.sqlwh%(self.uid)	
 			self.host1   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":"cd /home/itcast/testy;./sleepTest.o"}
 			self.host2   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":"cd /home/itcast/testy;./sleepTest.o"}
 			self.host3   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":"cd /home/itcast/testy;./sleepTest.o"}
@@ -90,7 +87,8 @@ class TakeShow(object):
 			print("success+id=%s"%self.hostid)
 			days = datetime.timedelta(days=i)
 			self.ShowDays = (Etime-days).strftime("%Y-%m-%d")
-			self.cmd     = "cd %s:./adhoc_ctr_feeding.o' '1' %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(self.oid))
+			self.cmd = "cd %s:./adhoc_ctr_feeding.o' '1' %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(self.oid))
+			print("self.cmd%s"%self.cmd)
 			#通过hostid确定执行的命令和主机ip
 			if self.hostid==1:
 				self.remote_execute(self.host1)
