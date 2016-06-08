@@ -91,8 +91,8 @@ class TakeShow(object):
 			self.ShowDays = (Etime-days).strftime("%Y-%m-%d")
 			#通过hostid确定执行的命令和主机ip
 			if self.hostid==1:
-				self.cmd = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(self.oid))
-				self.host1=self.host1%(self.cmd)
+				self.cmd1 = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(self.oid))
+				self.host1["cmd"]=self.cmd1
 				print("self.host1%s"%self.host1)
 				self.remote_execute(self.host1)
 			elif self.hostid==2:
