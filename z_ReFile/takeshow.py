@@ -44,7 +44,7 @@ class TakeShow(object):
 			self.hostid  = int((self.pat)[6])
 			self.sqlcom  = self.sqlcom%(self.uid)
 			self.sqlwh   = self.sqlwh%(self.uid)	
-			self.host1   = {"host_":"192.168.241.50","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":"cd /home/zzg/coopinion/lemur-4.11/site-search/oopin_cgi_ctr_v2/bin_1;./adhoc_ctr_feeding.o' '1' 12 2016-06-08 12"}
+			self.host1   = {"host_":"192.168.241.50","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":"cd /home/zzg/coopinion/lemur-4.11/site-search/oopin_cgi_ctr_v2/bin_1;./adhoc_ctr_feeding 1 893 2016-06-08 18381"}
 			self.host2   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":"cd /home/itcast/testy;./sleepTest.o"}
 			self.host3   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":"cd /home/itcast/testy;./sleepTest.o"}
 
