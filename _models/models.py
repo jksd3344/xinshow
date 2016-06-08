@@ -16,6 +16,7 @@ class feedgo(models.Model):
     oid=models.IntegerField(blank=True,null=True) #oid
     startprogress=models.IntegerField(blank=True,null=True)#进度
     comprogress=models.IntegerField(blank=True,null=True)#进度
+    hostid=models.IntegerField(blank=True,null=False)#进度
 
     class Meta:
     	managed = False
