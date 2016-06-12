@@ -73,7 +73,7 @@ class TakeShow(object):
 			username = hostmsg.get("username",""),
 			password = hostmsg.get("password",""),
 			)
-
+		print("cmd=%s"%hostmsg.get("cmd",""))
 		stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
 		for i in stdout:
 			print("stdout=%s"%i)
