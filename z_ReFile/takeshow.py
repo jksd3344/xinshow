@@ -47,11 +47,11 @@ class TakeShow(object):
 			self.hostid  = int((self.pat)[6])
 			self.ruleid  = int((self.pat)[7])
 			self.sqlwh   = self.sqlwh%(self.uid)	
-			self.host1   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
-			# self.host1   = {"host_":"192.168.241.50","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":"%s"}
+			# self.host1   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
+			self.host1   = {"host_":"192.168.241.50","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
 			self.host2   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
 			self.host3   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
-			self.cmd1   = "cd /home/itcast/testy;./sleepTest.o"
+			self.cmd1   = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(self.oid))
 			self.cmd2   = "cd /home/itcast/testy;./sleepTest.o"
 			self.cmd3   = "cd /home/itcast/testy;./sleepTest.o"
 		except Exception,e:
