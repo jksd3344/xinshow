@@ -47,12 +47,24 @@ def takemassage(request):
 	data         = {}
 	start         = 0
 	usetime   = 0
+	utime       = 0
 	Power      = 50
 	#如果结束日期小于开始日期则错误
 	if (Etime-Stime).days < 0:
 		start=500
 		return JsonRes(json.dumps(start))
 	usetime=(Etime-Stime).days+1
+
+	# 获取规则id
+	st=Stime.strftime("%Y-%m-%d")
+	et=Etime.strftime("%Y-%m-%d")
+	ruleid=Pmsg.rule_calculation(st,et)
+	if ruleid==1:
+		usetime=usetime*2
+	elif ruleid==2:
+		usetime=usetime
+	elif ruleid==3:
+		usetime=usetime*3
 
 	#如果主机已到最高负载则错误
 	hostid = Pmsg.Power_calculation(Power,usetime,hostnum=3)
@@ -76,13 +88,15 @@ def takemassage(request):
 	cmd = "python /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py %s %s %s %s %s %s"%(Stime.strftime("%Y-%m-%d"),Etime.strftime("%Y-%m-%d"),ucid,oid,userid,hostid),
 	subprocess.Popen([
 		"python",
-		"/home/zzg/feed_tool/xinshow/z_ReFile/takeshow.py",
+		# "/home/zzg/feed_tool/xinshow/z_ReFile/takeshow.py",
+		"/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py",
 		Stime.strftime("%Y-%m-%d"),
 		Etime.strftime("%Y-%m-%d"),
 		ucid,
 		oid,
 		userid,
 		str(hostid),
+		str(ruleid),
 	])
 	print("cmd%s"%cmd)
 	start=200

@@ -20,13 +20,14 @@ class TakeShow(object):
 		self.ucid           = ""
 		self.Stime          = ""
 		self.Etime          = ""
-		self.ShowDays       = datetime.datetime.now()
-		self.bin1           = "/home/zzg/coopinion/lemur-4.11/site-search/oopin_cgi_ctr_v2/bin"
-		self.bin2           = "/home/zzg/coopinion/lemur-4.11/site-search/oopin_cgi_ctr_v2/bin_1"
+		self.ShowDays    = datetime.datetime.now()
+		self.bin1            = "/home/zzg/coopinion/lemur-4.11/site-search/oopin_cgi_ctr_v2/bin"
+		self.bin2            = "/home/zzg/coopinion/lemur-4.11/site-search/oopin_cgi_ctr_v2/bin_1"
 		self.bin3           = "/home/zzg/coopinion/lemur-4.11/site-search/oopin_cgi_ctr_v2/bin_2"
-		self.sqlcom         = "update feedgo set comprogress=(comprogress+1) where userid=%s"
+		self.sqlcom       = ""
 		self.sqlwh          = "update feedgo set Whether=1 where userid=%s"
 		self.hostid         = 0
+		self.ruleid         = 0
 		self.host1          = {}
 		self.host2          = {}
 		self.host3          = {}
@@ -44,12 +45,15 @@ class TakeShow(object):
 			self.oid     = (self.pat)[4]
 			self.uid     = (self.pat)[5]
 			self.hostid  = int((self.pat)[6])
-			self.sqlcom  = self.sqlcom%(self.uid)
+			self.ruleid  = int((self.pat)[7])
 			self.sqlwh   = self.sqlwh%(self.uid)	
-			self.host1   = {"host_":"192.168.241.50","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":"%s"}
-			self.host2   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":"cd /home/itcast/testy;./sleepTest.o"}
-			self.host3   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":"cd /home/itcast/testy;./sleepTest.o"}
-
+			self.host1   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
+			# self.host1   = {"host_":"192.168.241.50","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":"%s"}
+			self.host2   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
+			self.host3   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
+			self.cmd1   = "cd /home/itcast/testy;./sleepTest.o"
+			self.cmd2   = "cd /home/itcast/testy;./sleepTest.o"
+			self.cmd3   = "cd /home/itcast/testy;./sleepTest.o"
 		except Exception,e:
 			print "unknow parameter"
 			print "python take_file 'filename'"
@@ -75,6 +79,39 @@ class TakeShow(object):
 		return stdout
 
 
+	'''不同规则需要的执行'''
+	def rule_action(self,ruleid,host):
+		print("self.host1%s"%self.host1)
+		print("self.ruleid%s"%self.ruleid)
+		# self.cmd1 = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(self.oid))
+		# self.cmd2 = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(self.oid))
+		# self.cmd3 = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(self.oid))
+		if ruleid==1:
+			# 先执行bin文件
+			host["cmd"]=self.cmd1
+			self.remote_execute(host)
+			# 在执行bin_1文件
+			host["cmd"]=self.cmd2
+			self.remote_execute(host)
+			# 需要执行不同的sql语句
+			self.sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("2",self.uid)
+		elif ruleid ==2:
+			# 执行bin_3文件
+			host["cmd"]=self.cmd3
+			self.remote_execute(host)
+			self.sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("1",self.uid)
+		elif ruleid ==3:
+			#执行全部文件
+			host["cmd"]=self.cmd1
+			self.remote_execute(host)
+			host["cmd"]=self.cmd2
+			self.remote_execute(host)
+			host["cmd"]=self.cmd3
+			self.remote_execute(host)
+			self.sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("3",self.uid)
+		return 0
+
+
 
 	'''执行计划'''
 	def ImpmentSp(self):
@@ -84,25 +121,18 @@ class TakeShow(object):
 		Etime    = datetime.datetime.strptime(self.Etime,"%Y-%m-%d")
 		difdays = (Etime-Stime).days
 		
-		#执行次数为日期之差
+		# 执行次数为日期之差
 		for i in range(difdays+1):
 			print("success+id=%s"%self.hostid)
 			days = datetime.timedelta(days=i)
 			self.ShowDays = (Etime-days).strftime("%Y-%m-%d")
 			#通过hostid确定执行的命令和主机ip
 			if self.hostid==1:
-				self.cmd1 = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(self.oid))
-				self.host1["cmd"]=self.cmd1
-				print("self.host1%s"%self.host1)
-				self.remote_execute(self.host1)
+				self.rule_action(self.ruleid,self.host1)
 			elif self.hostid==2:
-				self.cmd2 = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(self.oid))
-				self.host2["cmd"]=self.cmd2
-				self.remote_execute(self.host2)
+				self.rule_action(self.ruleid,self.host2)
 			elif self.hostid==3:
-				self.cmd3 = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(self.oid))
-				self.host3["cmd"]=self.cmd3
-				self.remote_execute(self.host3)
+				self.rule_action(self.ruleid,self.host3)
 
 			com = db.execute(self.sqlcom)
 			db_show.commit()
