@@ -49,11 +49,12 @@ class TakeShow(object):
 			self.sqlwh   = self.sqlwh%(self.uid)	
 			# self.host1   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
 			self.host1   = {"host_":"192.168.241.50","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
-			self.host2   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
-			self.host3   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
-			self.cmd1   = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(self.oid))
-			self.cmd2   = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(self.oid))
-			self.cmd3   = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(self.oid))
+			self.host2   = {"host_":"192.168.241.18","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
+			self.host3   = {"host_":"192.168.241.17","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
+			self.cmd1   = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"
+			self.cmd2   = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"
+			self.cmd3   = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"
+			# "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(self.oid))
 			# self.cmd3   = "cd /home/itcast/testy;./sleepTest.o"
 		except Exception,e:
 			print "unknow parameter"
@@ -84,9 +85,9 @@ class TakeShow(object):
 	def rule_action(self,ruleid,host):
 		print("self.host1%s"%self.host1)
 		print("self.ruleid%s"%self.ruleid)
-		# self.cmd1 = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(self.oid))
-		# self.cmd2 = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(self.oid))
-		# self.cmd3 = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(self.oid))
+		self.cmd1= self.cmd1%(self.bin1,str(self.ucid),str(self.ShowDays),str(self.oid))
+		self.cmd2= self.cmd1%(self.bin2,str(self.ucid),str(self.ShowDays),str(self.oid))
+		self.cmd3= self.cmd1%(self.bin3,str(self.ucid),str(self.ShowDays),str(self.oid))
 		if ruleid==1:
 			# 先执行bin文件
 			host["cmd"]=self.cmd1

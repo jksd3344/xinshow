@@ -49,6 +49,9 @@ def takemassage(request):
 	usetime   = 0
 	utime       = 0
 	Power      = 50
+	st             = Stime.strftime("%Y-%m-%d")
+	et             = Etime.strftime("%Y-%m-%d")
+	
 	#如果结束日期小于开始日期则错误
 	if (Etime-Stime).days < 0:
 		start=500
@@ -56,8 +59,6 @@ def takemassage(request):
 	usetime=(Etime-Stime).days+1
 
 	# 获取规则id
-	st=Stime.strftime("%Y-%m-%d")
-	et=Etime.strftime("%Y-%m-%d")
 	ruleid=Pmsg.rule_calculation(st,et)
 	if ruleid==1:
 		usetime=usetime*2
