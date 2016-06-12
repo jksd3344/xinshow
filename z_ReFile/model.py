@@ -82,6 +82,8 @@ class Pmsg(object):
 		if data==self.err:
 			return self.err
 
+
+
 	#查询负载量之前必须先确定调用的时间与机器
 	'''
 		ruleid==1调用本周之内的时间(bin,bin_1)

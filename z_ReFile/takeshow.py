@@ -51,13 +51,11 @@ class TakeShow(object):
 			self.host1   = {"host_":"192.168.241.50","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
 			self.host2   = {"host_":"192.168.241.18","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
 			self.host3   = {"host_":"192.168.241.17","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
-			# "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(self.oid))
 			# self.cmd3   = "cd /home/itcast/testy;./sleepTest.o"
 		except Exception,e:
 			print "unknow parameter"
 			print "python take_file 'filename'"
 			exit()
-
 
 
 	'''脚本ssh登录执行功能'''
