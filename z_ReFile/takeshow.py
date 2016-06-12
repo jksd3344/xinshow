@@ -52,8 +52,9 @@ class TakeShow(object):
 			self.host2   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
 			self.host3   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
 			self.cmd1   = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(self.oid))
-			self.cmd2   = "cd /home/itcast/testy;./sleepTest.o"
-			self.cmd3   = "cd /home/itcast/testy;./sleepTest.o"
+			self.cmd2   = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(self.oid))
+			self.cmd3   = "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(self.oid))
+			# self.cmd3   = "cd /home/itcast/testy;./sleepTest.o"
 		except Exception,e:
 			print "unknow parameter"
 			print "python take_file 'filename'"
