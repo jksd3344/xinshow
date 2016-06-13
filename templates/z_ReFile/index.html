@@ -87,6 +87,13 @@
 		ucid   = $("#ucid").val();
 		oid     = $("#oid").val();
 		Remarks     = $("#remarks").val();
+
+		if(Stime==""||Etime==""||ucid==""||oid==""||Remarks=="")
+		{
+			alert("您有项目没有填写")
+			return 0
+		}
+
 		$.ajax({
 			url:"/z_ReFile/takemassage/",
 			type:"post",
@@ -95,14 +102,17 @@
 			{
 				if(msg==200)
 				{
-					window.location.href="http://112.253.2.61:8090/z_ReFile/Runmsg"
-					// window.location.href="http://127.0.0.1:9200/z_ReFile/Runmsg"					
+					// window.location.href="http://112.253.2.61:8090/z_ReFile/Runmsg"
+					window.location.href="http://127.0.0.1:8000/z_ReFile/Runmsg/1"					
 				}else if(msg=500)
 				{
 					alert("开始时间必须小于结束时间")
 				}else if(msg=400)
 				{
 					alert("主机需要休息一下")
+				}else if(msg=300)
+				{
+					alert("您提交了太多任务,宝宝处理不过来了")
 				}
 
 			}

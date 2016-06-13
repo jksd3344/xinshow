@@ -6,8 +6,10 @@ import json
 import datetime
 import subprocess
 from model import Pmsg
+from model import feed_list
 from django.shortcuts import render
 from django.http import HttpResponse
+fs=feed_list()
 Pmsg=Pmsg()
 
 
@@ -20,20 +22,28 @@ class JsonRes(HttpResponse):
         super(JsonRes, self).__init__(
             json.dumps(content),
             status=status,
-            content_type=content_type)	
+            content_type=content_type)
 
 '''首页(page)'''
 def index(request):
 	return render(request,"z_ReFile/index.html")
 
 '''任务列表页(page)'''
-def Runmsg(request):
-	data=Pmsg.feedgo_showmsg()
+def Runmsg(request,pageid):
+	data,totolpage,pageid=fs.feedgo_showmsg(int(pageid))
 	for i in data:
 		i["Stime"] = i["Stime"].strftime("%Y-%m-%d")
 		i["Etime"] = i["Etime"].strftime("%Y-%m-%d")
-	show = {"data":data}
+	show = {"data":data,"totolpage":totolpage,"pageid":pageid}
+
 	return render(request,"z_ReFile/Runmsg.html",show)
+
+'''shanchu'''
+def delmsg(request):
+	delid=request.POST.get("delid","")
+	Pmsg.feedgo_delmsg(delid)
+	start=200
+	return JsonRes(json.dumps(start))
 
 '''任务提交(ajax)'''
 def takemassage(request):
@@ -57,6 +67,11 @@ def takemassage(request):
 		start=500
 		return JsonRes(json.dumps(start))
 	usetime=(Etime-Stime).days+1
+
+	# 如果提交太多进程则错误
+	if len(oid)*usetime>25:
+		start=300
+		return JsonRes(json.dumps(start))
 
 	# 获取规则id
 	ruleid=Pmsg.rule_calculation(st,et)
@@ -89,8 +104,8 @@ def takemassage(request):
 		cmd = "python /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py %s %s %s %s %s %s"%(Stime.strftime("%Y-%m-%d"),Etime.strftime("%Y-%m-%d"),ucid,oid[i],userid,hostid),
 		subprocess.Popen([
 			"python",
-			"/home/zzg/feed_tool/xinshow/z_ReFile/takeshow.py",
-			# "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py",
+			# "/home/zzg/feed_tool/xinshow/z_ReFile/takeshow.py",
+			"/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py",
 			Stime.strftime("%Y-%m-%d"),
 			Etime.strftime("%Y-%m-%d"),
 			ucid,

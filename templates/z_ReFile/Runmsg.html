@@ -13,9 +13,7 @@
 	<script type="text/javascript" src="/static/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
 	<script type="text/javascript" src="/static/js/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
 </head>
-<style type="text/css">
-	
-</style>
+
 
 <body>
 
@@ -33,6 +31,7 @@
 				<th>oid</th>
 				<th>是否结束</th>
 				<th>进度</th>
+				<th>操作</th>
 
 			</tr>
 		</thead>
@@ -40,7 +39,7 @@
 
 	<tbody>
 	{%for i in data%}
-		<tr>
+		<tr id='{{i.id}}'>
 			<td>{{i.id}}</td>
 			<td>{{i.Remarks}}</td>
 			<td>{{i.Stime}}</td>
@@ -53,12 +52,28 @@
 			<td>完成</td>
 			{%endifequal%}
 			<td>{{i.comprogress}}/{{i.startprogress}}</td>
+			<td><button type="button" class="btn btn-warning" onclick="del_file('{{i.id}}')">删除</button></td>
 		</tr>
 	{%endfor%}
 	</tbody>
 
 
 	</table>
+
+	<ul class="pagination">
+
+		<!-- <li><a href="http://127.0.0.1:8000/z_ReFile/Runmsg/"+{{i}}-1>&laquo;</a></li> -->
+		{%for i in totolpage%}
+		{%ifequal pageid i%}
+		<li class="active"><a href="http://127.0.0.1:8000/z_ReFile/Runmsg/{{i}}" >{{i}}</a></li>
+		{%else%}
+		<li><a href="http://127.0.0.1:8000/z_ReFile/Runmsg/{{i}}" >{{i}}</a></li>
+		{%endifequal%}
+		{%endfor%}
+		<!-- <li><a href="http://127.0.0.1:8000/z_ReFile/Runmsg/">&raquo;</a></li> -->
+
+	</ul>
+
 	<br/>
 	<br/>
 	<hr />
@@ -68,6 +83,29 @@
 
 </body>
 <script type="text/javascript">
+
+	function del_file(delid){
+		sdid=$('#'+delid)
+		$.ajax({
+			url:"/z_ReFile/delmsg/",
+			type:"post",
+			data:{"delid":delid},
+			success:function(msg)
+			{
+				if(msg==200)
+				{
+					alert("删除成功")
+					sdid.hide(1000)
+
+				}else
+				{
+					alert("再试试")
+				}
+
+			}
+		})
+
+	}
 
 </script>
 </html>

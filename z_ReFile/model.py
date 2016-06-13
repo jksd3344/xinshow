@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 
 import time
+from math import ceil,floor
 import random
 import datetime
 import MySQLdb
@@ -10,6 +11,15 @@ db_show = MySQLdb.connect(host="123.57.226.182",user="root",passwd="Jksd3344",db
 db = db_show.cursor()  
 
 class Pmsg(object):
+
+	# 初始化数据
+	'''
+		ruleid:规则id
+		hostid:主机ip
+		suc:成功返回
+		err:失败返回
+
+	'''
 	def __init__(self):
 		self.ruleid=0
 		self.hostid=0
@@ -19,7 +29,7 @@ class Pmsg(object):
 	
 	#存储表
 	def feedgo_createspeed(self,data):
-		userid=str(random.randint(1,10000))
+		userid=str(random.randint(1,10000))+str(datetime.datetime.now().strftime("%Y"))
 		show = feedgo.objects.create(
 			userid=userid,
 			Stime=data.get("Stime",""),#是否结束
@@ -37,7 +47,21 @@ class Pmsg(object):
 	#遍历表
 	def feedgo_showmsg(self):
 		data = feedgo.objects.all().values()
+		num=feedgo.objects.all().count()
+		pnu=2
+		liannu=5
+		print("num=%s"%num)
+
+		sh=showpage(num,pnu,liannu)
+		da=sh.page_show(1)
+		print("da=%s"%da)
 		return data
+
+	#删除指定元素
+	def feedgo_delmsg(self,delid):
+		data = feedgo.objects.get(id=delid).delete()
+		return self.suc
+
 
 	#对返回数据进行处理
 	def take_sql(self,sql):
@@ -104,3 +128,104 @@ class Pmsg(object):
 			self.ruleid=3
 			# 策略id为3 当时间跨周时 执行bin1，bin2,bin3 执行3个文件
 		return self.ruleid
+
+
+
+# 返回分页数据
+class feed_list(object):
+	'''
+		pagenu:每页显示条数
+		linenum:每页显示链接数(未启用)
+	'''
+	def __init__(self):
+		self.pagenu=8
+		self.linenum=5
+		self.suc=200
+		self.err=500		
+
+
+	def feedgo_showmsg(self,pageid):
+		num=feedgo.objects.all().count()
+		sh=showpage(num,self.pagenu,self.linenum)
+		totolpage=sh.judge()
+		if pageid>totolpage:
+			pageid=1
+		top=[]
+		for i in range(totolpage):
+			top.append(i+1)
+		da=sh.page_show(pageid)
+		data = feedgo.objects.all().values()[da.start:da.end]
+		return data,top,pageid
+
+
+
+# 分页
+class showpage(object):
+	# 初始化数据
+	'''
+		total_records: 总条数
+		perpage:         每页条数
+		linesize:          每页链接数
+		totolpage:       计算得出的页数
+		data:               计算出来的数据
+
+	'''
+	def __init__(self,total_records,perpage,linesize):
+		self.total_records=total_records
+		self.perpage=perpage
+		self.finnum=linesize
+		self.totolpage=0
+		self.data={}
+
+	def judge(self):
+		if self.total_records>self.perpage:
+			self.totolpage=int(floor(self.total_records/float(self.perpage)))
+			for i in range(self.totolpage):
+				if i==0:
+					self.data[i+1]=page(i+1,i,i+self.perpage,self)
+				else:
+					self.data[i+1]=page(i+1,self.data[i].end,self.data[i].end+self.perpage,self)
+			if self.total_records%self.perpage!=0:
+				print("totolpage%s"%self.total_records,self.perpage)
+				self.data[self.totolpage+1]=page(self.totolpage+1,self.data[self.totolpage].end,self.total_records,self)
+				return self.totolpage+1
+		else:
+			self.totolpage=1
+			self.data[1]=page(1,0,self.total_records,self)
+		return self.totolpage
+
+	def page_show(self,page_num):
+		page_num=int(page_num)
+		if page_num in self.data.keys():
+			return self.data[page_num]
+		else:
+			return self.data[1]
+
+
+
+class page(object):
+
+	# 初始化数据
+	'''
+		pagenum:每页的页码
+		start:每页的起始位置
+		end:每页的结束位置
+		nextpage:下一页
+		prevpage:上一页
+		showpage:showpage类
+
+	'''
+	def __init__(self,pagenum,start,end,showpage):
+		self.pagenum=pagenum
+		self.start=start
+		self.end=end
+		self.nextpage=self.pagenum+1
+		self.prevpage=self.pagenum-1
+		self.showpage=showpage
+
+
+
+
+
+
+

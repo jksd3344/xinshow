@@ -13,7 +13,7 @@ int main(int argc,char* argv[])
 	fd = open("task.txt",O_WRONLY|O_CREAT|O_APPEND);
 	while(a)
 	{
-		sleep(1);
+		sleep(3);
 		printf("sssssss\n");
 		write(fd,ch,sizeof(ch));
 		a--;
