@@ -107,36 +107,61 @@ class TakeShow(object):
 		return 0
 
 
-
 	'''执行计划'''
 	def ImpmentSp(self):
 		self.TakePat()
-
+		print("start________________________________________")
 		Stime    = datetime.datetime.strptime(self.Stime,"%Y-%m-%d")
 		Etime    = datetime.datetime.strptime(self.Etime,"%Y-%m-%d")
 		difdays = (Etime-Stime).days
-		
-		# 执行次数为日期之差
-		for i in range(difdays+1):
-			print("success+id=%s"%self.hostid)
-			days = datetime.timedelta(days=i)
-			self.ShowDays = (Etime-days).strftime("%Y-%m-%d")
-			# self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(self.oid))
-			# self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(self.oid))
-			# self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(self.oid))
-			self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
-			self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
-			self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
-			#通过hostid确定执行的命令和主机ip
-			if self.hostid==1:
-				self.rule_action(self.ruleid,self.host1)
-			elif self.hostid==2:
-				self.rule_action(self.ruleid,self.host2)
-			elif self.hostid==3:
-				self.rule_action(self.ruleid,self.host3)
+		print("difdays",difdays)
 
-			com = db.execute(self.sqlcom)
-			db_show.commit()
+		q=Queue.Queue(maxsize=100)
+		for i in range(difdays+1):
+			q.put(i)
+
+		try:
+			while(1):
+				i=q.get()
+				days = datetime.timedelta(days=i)
+				self.ShowDays = (Etime-days).strftime("%Y-%m-%d")
+				self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
+				self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
+				self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
+				if self.hostid==1:
+					self.rule_action(self.ruleid,self.host1)
+				elif self.hostid==2:
+					self.rule_action(self.ruleid,self.host2)
+				elif self.hostid==3:
+					self.rule_action(self.ruleid,self.host3)
+
+				com = db.execute(self.sqlcom)
+				db_show.commit()
+		except Exception,e:
+			print("处理完了")
+
+
+		# 执行次数为日期之差
+		# for i in range(difdays+1):
+		# 	print("success+id=%s"%self.hostid)
+		# 	days = datetime.timedelta(days=i)
+		# 	self.ShowDays = (Etime-days).strftime("%Y-%m-%d")
+		# 	# self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(self.oid))
+		# 	# self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(self.oid))
+		# 	# self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(self.oid))
+		# 	self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
+		# 	self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
+		# 	self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
+		# 	#通过hostid确定执行的命令和主机ip
+		# 	if self.hostid==1:
+		# 		self.rule_action(self.ruleid,self.host1)
+		# 	elif self.hostid==2:
+		# 		self.rule_action(self.ruleid,self.host2)
+		# 	elif self.hostid==3:
+		# 		self.rule_action(self.ruleid,self.host3)
+
+		# 	com = db.execute(self.sqlcom)
+		# 	db_show.commit()
 
 		wh=db.execute(self.sqlwh)
 		db.close() 
