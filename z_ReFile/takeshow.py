@@ -148,7 +148,7 @@ class TakeShow(object):
 
 		wh=db.execute(self.sqlwh)
 		db.close() 
-
+		print("%s:任务结束"%self.uid)
 
 	def sig_show(self):
 		signal.signal(signal.SIGINT,self.reprogress)
