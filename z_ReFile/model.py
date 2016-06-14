@@ -185,7 +185,7 @@ class showpage(object):
 				else:
 					self.data[i+1]=page(i+1,self.data[i].end,self.data[i].end+self.perpage,self)
 			if self.total_records%self.perpage!=0:
-				print("totolpage%s"%self.total_records,self.perpage)
+				# print("totolpage%s"%self.total_records,self.perpage)
 				self.data[self.totolpage+1]=page(self.totolpage+1,self.data[self.totolpage].end,self.total_records,self)
 				return self.totolpage+1
 		else:
