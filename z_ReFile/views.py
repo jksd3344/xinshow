@@ -35,10 +35,9 @@ def Runmsg(request,pageid):
 		i["Stime"] = i["Stime"].strftime("%Y-%m-%d")
 		i["Etime"] = i["Etime"].strftime("%Y-%m-%d")
 	show = {"data":data,"totolpage":totolpage,"pageid":pageid}
-
 	return render(request,"z_ReFile/Runmsg.html",show)
 
-'''shanchu'''
+'''删除'''
 def delmsg(request):
 	delid=request.POST.get("delid","")
 	Pmsg.feedgo_delmsg(delid)
@@ -69,7 +68,7 @@ def takemassage(request):
 	usetime=(Etime-Stime).days+1
 
 	# 如果提交太多进程则错误
-	if len(oid)*usetime>25:
+	if len(oid)>20:
 		start=300
 		return JsonRes(json.dumps(start))
 
@@ -104,8 +103,8 @@ def takemassage(request):
 		cmd = "python /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py %s %s %s %s %s %s"%(Stime.strftime("%Y-%m-%d"),Etime.strftime("%Y-%m-%d"),ucid,oid[i],userid,hostid),
 		subprocess.Popen([
 			"python",
-			# "/home/zzg/feed_tool/xinshow/z_ReFile/takeshow.py",
-			"/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py",
+			"/home/zzg/feed_tool/xinshow/z_ReFile/takeshow.py",
+			# "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py",
 			Stime.strftime("%Y-%m-%d"),
 			Etime.strftime("%Y-%m-%d"),
 			ucid,

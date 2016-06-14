@@ -2,10 +2,10 @@
 # -*- coding:utf-8 -*-
 
 import time
-from math import ceil,floor
 import random
 import datetime
 import MySQLdb
+from math import ceil,floor
 from _models.models import feedgo
 db_show = MySQLdb.connect(host="123.57.226.182",user="root",passwd="Jksd3344",db="Shake",charset="utf8")   
 db = db_show.cursor()  
@@ -142,7 +142,6 @@ class feed_list(object):
 		self.linenum=5
 		self.suc=200
 		self.err=500		
-
 
 	def feedgo_showmsg(self,pageid):
 		num=feedgo.objects.all().count()
