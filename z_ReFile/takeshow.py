@@ -62,7 +62,7 @@ class TakeShow(object):
 
 	'''脚本ssh登录执行功能'''
 	def remote_execute(self,hostmsg):
-		print("cmd=%s"%hostmsg.get("cmd",""))
+		# print("cmd=%s"%hostmsg.get("cmd",""))
 		client = paramiko.SSHClient()
 		client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 		client.connect(
