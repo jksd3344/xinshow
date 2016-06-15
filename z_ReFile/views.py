@@ -79,7 +79,7 @@ def takemassage(request):
 	start         = 0
 	usetime   = 0
 	utime       = 0
-	Power      = 500
+	Power      = 1000
 	st             = Stime.strftime("%Y-%m-%d")
 	et             = Etime.strftime("%Y-%m-%d")
 
