@@ -108,7 +108,7 @@ def takemassage(request):
 	if hostid==500:
 		start=400
 		return JsonRes(json.dumps(start))
-
+	
 	for i in range(len(oid)):
 		data={
 			"Stime":Stime,#开始时间
