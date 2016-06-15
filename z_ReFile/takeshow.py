@@ -35,6 +35,9 @@ class TakeShow(object):
 		self.cmd1          = ""
 		self.cmd2          = ""
 		self.cmd3          = ""
+		self.filename    = "z_ReFile/filelog.txt"
+		
+
 
 	'''初始化参数'''
 	def TakePat(self):
@@ -62,7 +65,9 @@ class TakeShow(object):
 
 	'''脚本ssh登录执行功能'''
 	def remote_execute(self,hostmsg):
-		# print("cmd=%s"%hostmsg.get("cmd",""))
+		talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
+		print(cmdtale)
+
 		client = paramiko.SSHClient()
 		client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 		client.connect(
@@ -72,12 +77,16 @@ class TakeShow(object):
 			password = hostmsg.get("password",""),
 			)
 		stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
+
 		for i in stdout:
-			print("stdout=%s"%i)
+			talk.append("%s"%i)
+			print("std===:%s"%i)
+		talk=''.join(talk)+"------------\n"
+		self.writesome(talk,self.filename)
 		return stdout
 
 
-	'''不同规则需要的执行'''
+	'''不同规则需要的执行策略'''
 	def rule_action(self,ruleid,host):
 		if ruleid==1:
 			# 先执行bin文件
@@ -105,12 +114,22 @@ class TakeShow(object):
 		return 0
 
 
+	'''log写入文件'''
+	def writesome(self,talk,filename):
+		fs=open(filename,"a+")
+		fs.write(talk)
+		fs.close()
+
+
 	'''执行计划'''
 	def ImpmentSp(self):
 		self.TakePat()
 		self.sig_show()
 
-		print("start________________________________________")
+		talk="start________________________________________\n"
+		self.writesome(talk,self.filename)
+		print("talk=%s"%talk)
+
 		Stime    = datetime.datetime.strptime(self.Stime,"%Y-%m-%d")
 		Etime    = datetime.datetime.strptime(self.Etime,"%Y-%m-%d")
 		difdays = (Etime-Stime).days
@@ -119,7 +138,11 @@ class TakeShow(object):
 		for i in range(difdays+1):
 			days = datetime.timedelta(days=i)
 			self.ShowDays = (Etime-days).strftime("%Y-%m-%d")
-			print("%s:success"%self.ShowDays)
+
+			talk="%s:success\n"%self.ShowDays
+			self.writesome(talk,self.filename)
+			print("talk=%s"%talk)
+
 			if self.oid=="0":
 				self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays))
 				self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays))
@@ -148,18 +171,21 @@ class TakeShow(object):
 
 		wh=db.execute(self.sqlwh)
 		db.close() 
-		print("%s:任务结束"%self.uid)
 
+		talk="id:%s:--------End--------\n"%self.uid
+		self.writesome(talk,self.filename)
+		print(talk)
+
+
+	'''信号阻断处理'''
 	def sig_show(self):
 		signal.signal(signal.SIGINT,self.reprogress)
 		signal.signal(signal.SIGCHLD,self.reprogress)
 
 	def reprogress(a,b):
-		sigtalk="%s号信号处理信息被阻断,\
-		在处理之前您的进度已达到%s"%(a,self.ShowDays)
-		filename="siglog"
-		fs=open(filename,'w')
-		fs.write(sigtalk)
+		time=datetime.datetime.now().strftime("%Y-%m-%d,%H:%M:%S")
+		sigtalk="%s:   :%s号信号处理信息被阻断,在处理之前您的进度已达到%s\n"%(time,a,self.ShowDays)
+		self.writesome(sigtalk,self.filename)
 
 
 if __name__=='__main__':

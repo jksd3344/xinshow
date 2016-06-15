@@ -24,6 +24,28 @@ class JsonRes(HttpResponse):
             status=status,
             content_type=content_type)
 
+
+'''注册----------------------------------------------------------------------(未完成)-'''
+def regist(request):
+	if request.method=='POST':
+		username           =  request.POST.get("username","")
+		department        =  request.POST.get("department","")
+		passward            =  request.POST.get("passward","")
+		passwardagain   =  request.POST.get("passwardagain","")
+		print("s=%s"%{"username":username,"department":department,"passward":passward,"passwardagain":passwardagain})
+		start=200
+		return JsonRes(json.dumps(start))
+	else:
+		return render(request,"z_ReFile/regist.html")
+
+'''登陆'''
+def login(request):
+	return render(request,"z_ReFile/login.html")
+'''---------------------------------------------------------------------------------'''
+
+
+
+
 '''首页(page)'''
 def index(request):
 	return render(request,"z_ReFile/index.html")
@@ -86,6 +108,7 @@ def takemassage(request):
 	if hostid==500:
 		start=400
 		return JsonRes(json.dumps(start))
+
 	for i in range(len(oid)):
 		data={
 			"Stime":Stime,#开始时间

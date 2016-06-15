@@ -16,10 +16,18 @@
 
 
 <body>
-
+<nav class="navbar navbar-default" role="navigation" style="border-left:0px">
+	<div class="navbar-header">
+		<a class="navbar-brand">Feed</a>
+	</div>
+	<div>
+		<ul class="nav navbar-nav">
+			<li><a href="/z_ReFile/index">start feed</a></li>
+			<li class="active"><a href="/z_ReFile/Runmsg/1">feed list</a></li>
+		</ul>
+	</div>
+</nav>
 <div class="form-group" style="width:950px;margin:20px">
-	<h1>feed index</h1>
-
 	<table class="table table-striped">
 		<thead>
 			<tr>
@@ -35,8 +43,6 @@
 
 			</tr>
 		</thead>
-
-
 	<tbody>
 	{%for i in data%}
 		<tr id='{{i.id}}'>
@@ -65,11 +71,9 @@
 		<!-- <li><a href="http://127.0.0.1:8000/z_ReFile/Runmsg/"+{{i}}-1>&laquo;</a></li> -->
 		{%for i in totolpage%}
 		{%ifequal pageid i%}
-		<!-- <li class="active"><a href="http://127.0.0.1:8000/z_ReFile/Runmsg/{{i}}" >{{i}}</a></li> -->
-		<li class="active"><a href="http://112.253.2.61:8090/z_ReFile/Runmsg/{{i}}" >{{i}}</a></li>
+		<li class="active"><a href="/z_ReFile/Runmsg/{{i}}" >{{i}}</a></li>
 		{%else%}
-		<!-- <li><a href="http://127.0.0.1:8000/z_ReFile/Runmsg/{{i}}" >{{i}}</a></li> -->
-		<li><a href="http://112.253.2.61:8090/z_ReFile/Runmsg/{{i}}" >{{i}}</a></li>
+		<li><a href="/z_ReFile/Runmsg/{{i}}" >{{i}}</a></li>
 		{%endifequal%}
 		{%endfor%}
 		<!-- <li><a href="http://127.0.0.1:8000/z_ReFile/Runmsg/">&raquo;</a></li> -->
