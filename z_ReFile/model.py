@@ -26,7 +26,7 @@ class Pmsg(object):
 		self.suc=200
 		self.err=500
 		self.sql="SELECT SUM(%s) FROM feedgo WHERE Whether=0 AND hostid=%s"
-	
+
 	#存储表
 	def feedgo_createspeed(self,data):
 		userid=str(random.randint(1,10000))+str(datetime.datetime.now().strftime("%Y"))
@@ -63,7 +63,7 @@ class Pmsg(object):
 		return self.suc
 
 
-	#对返回数据进行处理
+	# 对返回数据进行处理
 	def take_sql(self,sql):
 		data=0
 		db.execute(sql)

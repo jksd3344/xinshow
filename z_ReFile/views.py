@@ -79,7 +79,7 @@ def takemassage(request):
 	start         = 0
 	usetime   = 0
 	utime       = 0
-	Power      = 50
+	Power      = 500
 	st             = Stime.strftime("%Y-%m-%d")
 	et             = Etime.strftime("%Y-%m-%d")
 
@@ -108,7 +108,7 @@ def takemassage(request):
 	if hostid==500:
 		start=400
 		return JsonRes(json.dumps(start))
-	
+
 	for i in range(len(oid)):
 		data={
 			"Stime":Stime,#开始时间
@@ -126,8 +126,8 @@ def takemassage(request):
 		cmd = "python /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py %s %s %s %s %s %s"%(Stime.strftime("%Y-%m-%d"),Etime.strftime("%Y-%m-%d"),ucid,oid[i],userid,hostid),
 		subprocess.Popen([
 			"python",
-			"/home/zzg/feed_tool/xinshow/z_ReFile/takeshow.py",
-			# "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py",
+			# "/home/zzg/feed_tool/xinshow/z_ReFile/takeshow.py",
+			"/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py",
 			Stime.strftime("%Y-%m-%d"),
 			Etime.strftime("%Y-%m-%d"),
 			ucid,
