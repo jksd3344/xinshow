@@ -90,6 +90,7 @@ class TakeShow(object):
 			# 先执行bin文件
 			host["cmd"]=self.cmd1
 			print("host11111",host)
+
 			self.p.apply_async(remote_execute,args=(host,))
 			# 在执行bin_1文件
 			host["cmd"]=self.cmd2
