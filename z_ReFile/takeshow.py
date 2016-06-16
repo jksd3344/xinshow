@@ -65,23 +65,23 @@ class TakeShow(object):
 			print "python take_file 'filename'"
 			exit()
 
-	# '''脚本ssh登录执行功能'''
-	# def remote_execute(self,hostmsg):
-	# 	talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
-	# 	print(cmdtale)
+	'''脚本ssh登录执行功能'''
+	def remote_execute(self,hostmsg):
+		talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
+		print(cmdtale)
 
-	# 	client = paramiko.SSHClient()
-	# 	client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-	# 	client.connect(
-	# 		hostmsg.get("host_",""),
-	# 		port = hostmsg.get("port_",""),
-	# 		username = hostmsg.get("username",""),
-	# 		password = hostmsg.get("password",""),
-	# 		)
-	# 	stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
-	# 	for i in stdout:
-	# 		print("go=%s\n"%i)
-	# 	return stdout
+		client = paramiko.SSHClient()
+		client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+		client.connect(
+			hostmsg.get("host_",""),
+			port = hostmsg.get("port_",""),
+			username = hostmsg.get("username",""),
+			password = hostmsg.get("password",""),
+			)
+		stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
+		for i in stdout:
+			print("go=%s\n"%i)
+		return stdout
 
 
 	'''不同规则需要的执行策略'''
@@ -89,27 +89,31 @@ class TakeShow(object):
 		if ruleid==1:
 			# 先执行bin文件
 			host["cmd"]=self.cmd1
-			print("host11111",host)
-
-			self.p.apply_async(remote_execute,args=(host,))
+			self.remote_execute(host)
+			# self.p.apply_async(remote_execute,args=(host,))
 			# 在执行bin_1文件
 			host["cmd"]=self.cmd2
-			self.p.apply_async(remote_execute,args=(host,))
+			self.remote_execute(host)
+			# self.p.apply_async(remote_execute,args=(host,))
 			# 需要执行不同的sql语句
 			self.sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("2",self.uid)
 		elif ruleid ==2:
 			# 执行bin_3文件
 			host["cmd"]=self.cmd3
-			self.p.apply_async(remote_execute,args=(host,))
+			# self.p.apply_async(remote_execute,args=(host,))
+			self.remote_execute(host)
 			sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("1",self.uid)
 		elif ruleid ==3:
 			#执行全部文件
 			host["cmd"]=self.cmd1
-			self.p.apply_async(remote_execute,args=(host,))
+			# self.p.apply_async(remote_execute,args=(host,))
+			self.remote_execute(host)
 			host["cmd"]=self.cmd2
-			self.p.apply_async(remote_execute,args=(host,))
+			# self.p.apply_async(remote_execute,args=(host,))
+			self.remote_execute(host)
 			host["cmd"]=self.cmd3
-			self.p.apply_async(remote_execute,args=(host,))
+			# self.p.apply_async(remote_execute,args=(host,))
+			self.remote_execute(host)
 			self.sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("3",self.uid)
 		return 0
 
@@ -160,9 +164,9 @@ class TakeShow(object):
 					self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(i))
 					self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(i))
 					self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(i))
-					# self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
-					# self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
-					# self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+					# self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
+					# self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
+					# self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
 					
 					# 通过hostid确定执行的命令和主机ip
 					self.hosid_show()
@@ -193,24 +197,25 @@ class TakeShow(object):
 
 '''脚本ssh登录执行功能'''
 def remote_execute(hostmsg):
-	print("hostmsg111%s"%hostmsg)
-	# talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
-	# print(cmdtale)
+	talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
+	print(cmdtale)
 
-	# client = paramiko.SSHClient()
-	# client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-	# client.connect(
-	# 	hostmsg.get("host_",""),
-	# 	port = hostmsg.get("port_",""),
-	# 	username = hostmsg.get("username",""),
-	# 	password = hostmsg.get("password",""),
-	# 	)
-	# stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
-	# for i in stdout:
-	# 	print("go=%s\n"%i)
+	client = paramiko.SSHClient()
+	client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+	client.connect(
+		hostmsg.get("host_",""),
+		port = hostmsg.get("port_",""),
+		username = hostmsg.get("username",""),
+		password = hostmsg.get("password",""),
+		)
+	stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
+	for i in stdout:
+		print("go=%s\n"%i)
 	return stdout
 
 
+def ps(x):
+	print("ssss")
 
 if __name__=='__main__':
 	Ts=TakeShow()
