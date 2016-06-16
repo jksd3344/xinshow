@@ -89,7 +89,7 @@ class TakeShow(object):
 		if ruleid==1:
 			# 先执行bin文件
 			host["cmd"]=self.cmd1
-			print("self.cmd1",self.cmd1)
+			print("host11111",host)
 			self.p.apply_async(remote_execute,args=(host,))
 			# 在执行bin_1文件
 			host["cmd"]=self.cmd2
@@ -192,21 +192,21 @@ class TakeShow(object):
 
 '''脚本ssh登录执行功能'''
 def remote_execute(hostmsg):
-	print("hostmsg%s"%hostmsg)
-	talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
-	print(cmdtale)
+	print("hostmsg111%s"%hostmsg)
+	# talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
+	# print(cmdtale)
 
-	client = paramiko.SSHClient()
-	client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-	client.connect(
-		hostmsg.get("host_",""),
-		port = hostmsg.get("port_",""),
-		username = hostmsg.get("username",""),
-		password = hostmsg.get("password",""),
-		)
-	stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
-	for i in stdout:
-		print("go=%s\n"%i)
+	# client = paramiko.SSHClient()
+	# client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+	# client.connect(
+	# 	hostmsg.get("host_",""),
+	# 	port = hostmsg.get("port_",""),
+	# 	username = hostmsg.get("username",""),
+	# 	password = hostmsg.get("password",""),
+	# 	)
+	# stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
+	# for i in stdout:
+	# 	print("go=%s\n"%i)
 	return stdout
 
 
