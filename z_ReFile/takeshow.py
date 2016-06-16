@@ -89,8 +89,8 @@ class TakeShow(object):
 		print("self.cmd1",self.cmd1)
 		if ruleid==1:
 			# 先执行bin文件
-			host["cmd"]=self.cmd1
-			self.p.apply_async(remote_execute,args=(host,))
+			# host["cmd"]=self.cmd1
+			# self.p.apply_async(remote_execute,args=(host,))
 			# 在执行bin_1文件
 			host["cmd"]=self.cmd2
 			self.p.apply_async(remote_execute,args=(host,))
