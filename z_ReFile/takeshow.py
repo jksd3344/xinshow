@@ -89,6 +89,7 @@ class TakeShow(object):
 		if ruleid==1:
 			# 先执行bin文件
 			host["cmd"]=self.cmd1
+			print("self.cmd1",self.cmd1)
 			self.p.apply_async(remote_execute,args=(host,))
 			# 在执行bin_1文件
 			host["cmd"]=self.cmd2
@@ -98,11 +99,13 @@ class TakeShow(object):
 		elif ruleid ==2:
 			# 执行bin_3文件
 			host["cmd"]=self.cmd3
+			print("self.cmd3",self.cmd3)
 			self.p.apply_async(remote_execute,args=(host,))
 			sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("1",self.uid)
 		elif ruleid ==3:
 			#执行全部文件
 			host["cmd"]=self.cmd1
+			print("self.cmd1",self.cmd1)
 			self.p.apply_async(remote_execute,args=(host,))
 			host["cmd"]=self.cmd2
 			self.p.apply_async(remote_execute,args=(host,))
