@@ -77,12 +77,6 @@ class TakeShow(object):
 			password = hostmsg.get("password",""),
 			)
 		stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
-
-		for i in stdout:
-			talk.append("%s"%i)
-			print("std===:%s"%i)
-		talk=''.join(talk)+"------------\n"
-		self.writesome(talk,self.filename)
 		return stdout
 
 
@@ -114,12 +108,6 @@ class TakeShow(object):
 		return 0
 
 
-	'''log写入文件'''
-	def writesome(self,talk,filename):
-		fs=open(filename,"a+")
-		fs.write(talk)
-		fs.close()
-
 	def hosid_show(self):
 		if self.hostid==1:
 			self.rule_action(self.ruleid,self.host1)
@@ -134,7 +122,6 @@ class TakeShow(object):
 		self.sig_show()
 
 		talk="start________________________________________\n"
-		self.writesome(talk,self.filename)
 		print("talk=%s"%talk)
 
 		Stime    = datetime.datetime.strptime(self.Stime,"%Y-%m-%d")
@@ -148,7 +135,6 @@ class TakeShow(object):
 			self.ShowDays = (Etime-days).strftime("%Y-%m-%d")
 
 			talk="%s:success\n"%self.ShowDays
-			self.writesome(talk,self.filename)
 			print("talk=%s"%talk)
 
 			if self.oid==["0"]:
@@ -180,7 +166,6 @@ class TakeShow(object):
 		db.close() 
 
 		talk="id:%s:--------End--------\n"%self.uid
-		self.writesome(talk,self.filename)
 		print(talk)
 
 
@@ -192,7 +177,7 @@ class TakeShow(object):
 	def reprogress(a,b):
 		time=datetime.datetime.now().strftime("%Y-%m-%d,%H:%M:%S")
 		sigtalk="%s:   :%s号信号处理信息被阻断,在处理之前您的进度已达到%s\n"%(time,a,self.ShowDays)
-		self.writesome(sigtalk,self.filename)
+		print(sigtalk)
 
 
 if __name__=='__main__':
