@@ -42,7 +42,6 @@ class Pmsg(object):
 			comprogress=data.get("comprogress",""),
 			hostid=data.get("hostid","")
 			)
-		print("oid=%s"%data)
 		return userid
 	
 	#遍历表
