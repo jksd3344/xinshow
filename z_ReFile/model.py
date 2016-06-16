@@ -147,9 +147,8 @@ class feed_list(object):
 		for i in range(totolpage):
 			top.append(i+1)
 		da=sh.page_show(pageid)
-		data = feedgo.objects.all().values()[da.start:da.end]
+		data = feedgo.objects.all().order_by('-id').values()[da.start:da.end]
 		return data,top,pageid
-
 
 
 # 分页
