@@ -86,7 +86,7 @@ class TakeShow(object):
 
 	'''不同规则需要的执行策略'''
 	def rule_action(self,ruleid,host):
-		print("self.cmd1",self.cmd1)
+		print("host",host)
 		if ruleid==1:
 			# 先执行bin文件
 			host["cmd"]=self.cmd1
@@ -191,7 +191,7 @@ class TakeShow(object):
 
 '''脚本ssh登录执行功能'''
 def remote_execute(hostmsg):
-	print("host=%s"%hostmsg)
+	print("host=%s"%host)
 	talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
 	print(cmdtale)
 
