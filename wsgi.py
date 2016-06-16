@@ -21,3 +21,4 @@ sys.path.append(BASE_DIR)
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'xin_show.settings'
 
+application = get_wsgi_application()
