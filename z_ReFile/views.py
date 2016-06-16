@@ -106,8 +106,8 @@ def takemassage(request):
 
 	#如果主机已到最高负载则错误
 	# hostid = Pmsg.Power_calculation(Power,hostnum=3)
-	# hostid=random.randint(1, 3)
-	hostid=1
+	hostid=random.randint(1, 3)
+	# hostid=1
 	oid=','.join(oid)
 	
 
