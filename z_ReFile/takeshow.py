@@ -191,6 +191,7 @@ class TakeShow(object):
 
 '''脚本ssh登录执行功能'''
 def remote_execute(hostmsg):
+	print("host=%s"%host)
 	talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
 	print(cmdtale)
 
@@ -208,8 +209,6 @@ def remote_execute(hostmsg):
 	return stdout
 
 
-def ps(x):
-	print("ssss")
 
 if __name__=='__main__':
 	Ts=TakeShow()
