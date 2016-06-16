@@ -10,7 +10,6 @@ import MySQLdb
 import subprocess
 import datetime,time
 from multiprocessing import Pool
-p = Pool(25)
 db_show = MySQLdb.connect(host="123.57.226.182",user="root",passwd="Jksd3344",db="Shake",charset="utf8")   
 db = db_show.cursor()
 
@@ -39,6 +38,7 @@ class TakeShow(object):
 		self.cmd2          = ""
 		self.cmd3          = ""
 		self.filename    = "z_ReFile/filelog.txt"
+		self.p                 = Pool(10)
 	
 
 
@@ -86,29 +86,29 @@ class TakeShow(object):
 
 	'''不同规则需要的执行策略'''
 	def rule_action(self,ruleid,host):
-		print("self.cmd1",self.cmd1)
 		if ruleid==1:
 			# 先执行bin文件
 			host["cmd"]=self.cmd1
-			p.apply_async(remote_execute,args=(host,))
+			print("self.cmd1",self.cmd1)
+			self.p.apply_async(remote_execute,args=(host,))
 			# 在执行bin_1文件
 			host["cmd"]=self.cmd2
-			p.apply_async(remote_execute,args=(host,))
+			self.p.apply_async(remote_execute,args=(host,))
 			# 需要执行不同的sql语句
 			self.sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("2",self.uid)
 		elif ruleid ==2:
 			# 执行bin_3文件
 			host["cmd"]=self.cmd3
-			p.apply_async(remote_execute,args=(host,))
+			self.p.apply_async(remote_execute,args=(host,))
 			sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("1",self.uid)
 		elif ruleid ==3:
 			#执行全部文件
 			host["cmd"]=self.cmd1
-			p.apply_async(remote_execute,args=(host,))
+			self.p.apply_async(remote_execute,args=(host,))
 			host["cmd"]=self.cmd2
-			p.apply_async(remote_execute,args=(host,))
+			self.p.apply_async(remote_execute,args=(host,))
 			host["cmd"]=self.cmd3
-			p.apply_async(remote_execute,args=(host,))
+			self.p.apply_async(remote_execute,args=(host,))
 			self.sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("3",self.uid)
 		return 0
 
