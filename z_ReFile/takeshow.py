@@ -65,23 +65,23 @@ class TakeShow(object):
 			print "python take_file 'filename'"
 			exit()
 
-	'''脚本ssh登录执行功能'''
-	def remote_execute(self,hostmsg):
-		talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
-		print(cmdtale)
+	# '''脚本ssh登录执行功能'''
+	# def remote_execute(self,hostmsg):
+	# 	talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
+	# 	print(cmdtale)
 
-		client = paramiko.SSHClient()
-		client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-		client.connect(
-			hostmsg.get("host_",""),
-			port = hostmsg.get("port_",""),
-			username = hostmsg.get("username",""),
-			password = hostmsg.get("password",""),
-			)
-		stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
-		for i in stdout:
-			print("go=%s\n"%i)
-		return stdout
+	# 	client = paramiko.SSHClient()
+	# 	client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+	# 	client.connect(
+	# 		hostmsg.get("host_",""),
+	# 		port = hostmsg.get("port_",""),
+	# 		username = hostmsg.get("username",""),
+	# 		password = hostmsg.get("password",""),
+	# 		)
+	# 	stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
+	# 	for i in stdout:
+	# 		print("go=%s\n"%i)
+	# 	return stdout
 
 
 	'''不同规则需要的执行策略'''
@@ -191,7 +191,7 @@ class TakeShow(object):
 
 '''脚本ssh登录执行功能'''
 def remote_execute(hostmsg):
-	print("host=%s"%host)
+	print("host=%s"%hostmsg)
 	talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
 	print(cmdtale)
 
