@@ -86,10 +86,10 @@ class TakeShow(object):
 
 	'''不同规则需要的执行策略'''
 	def rule_action(self,ruleid,host):
+		print("self.cmd1",self.cmd1)
 		if ruleid==1:
 			# 先执行bin文件
 			host["cmd"]=self.cmd1
-			print("self.cmd1",self.cmd1)
 			self.p.apply_async(remote_execute,args=(host,))
 			# 在执行bin_1文件
 			host["cmd"]=self.cmd2
