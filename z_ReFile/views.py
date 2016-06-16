@@ -138,7 +138,7 @@ def takemassage(request):
 		str(hostid),
 		str(ruleid),
 	])
-	print("cmd=%s"%cmd)
+	print("cmd??=%s"%cmd)
 	start=200
 	return JsonRes(json.dumps(start))
 

@@ -54,12 +54,12 @@ class TakeShow(object):
 			self.hostid  = int((self.pat)[6])
 			self.ruleid  = int((self.pat)[7])
 			self.sqlwh   = self.sqlwh%(self.uid)	
-			self.host1   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
-			self.host2   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
-			self.host3   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
-			# self.host1   = {"host_":"192.168.241.50","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
-			# self.host2   = {"host_":"192.168.241.18","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
-			# self.host3   = {"host_":"192.168.241.17","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
+			# self.host1   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
+			# self.host2   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
+			# self.host3   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
+			self.host1   = {"host_":"192.168.241.50","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
+			self.host2   = {"host_":"192.168.241.18","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
+			self.host3   = {"host_":"192.168.241.17","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
 		except Exception,e:
 			print "unknow parameter"
 			print "python take_file 'filename'"
@@ -86,10 +86,10 @@ class TakeShow(object):
 
 	'''不同规则需要的执行策略'''
 	def rule_action(self,ruleid,host):
-		print("host",host)
 		if ruleid==1:
 			# 先执行bin文件
 			host["cmd"]=self.cmd1
+			print("self.cmd1",self.cmd1)
 			self.p.apply_async(remote_execute,args=(host,))
 			# 在执行bin_1文件
 			host["cmd"]=self.cmd2
@@ -114,6 +114,7 @@ class TakeShow(object):
 
 
 	def hosid_show(self):
+		print("ss")
 		if self.hostid==1:
 			self.rule_action(self.ruleid,self.host1)
 		elif self.hostid==2:
@@ -144,23 +145,23 @@ class TakeShow(object):
 			print("talk=%s"%talk)
 
 			if self.oid==["0"]:
-				# self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays))
-				# self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays))
-				# self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays))
-				self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
-				self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
-				self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
+				self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays))
+				self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays))
+				self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays))
+				# self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
+				# self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
+				# self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
 
 				# 通过hostid确定执行的命令和主机ip
 				self.hosid_show()
 			else:
 				for i in self.oid:
-					# self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(i))
-					# self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(i))
-					# self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(i))
-					self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
-					self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
-					self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
+					self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(i))
+					self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(i))
+					self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(i))
+					# self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+					# self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+					# self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
 					
 					# 通过hostid确定执行的命令和主机ip
 					self.hosid_show()
@@ -191,7 +192,7 @@ class TakeShow(object):
 
 '''脚本ssh登录执行功能'''
 def remote_execute(hostmsg):
-	print("host=%s"%host)
+	print("hostmsg%s"%hostmsg)
 	talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
 	print(cmdtale)
 
