@@ -78,8 +78,8 @@ class TakeShow(object):
 			password = hostmsg.get("password",""),
 			)
 		stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
-		for i in stdout.readlines():
-			print("go=%s"%i)
+		for i in stdout:
+			print("go=%s\n"%i)
 		return stdout
 
 	'''不同规则需要的执行策略'''
