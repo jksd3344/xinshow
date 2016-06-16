@@ -18,8 +18,8 @@ db = db_show.cursor()
 class TakeShow(object):
 	def __init__(self):
 		self.pat            = []
-		self.oid            = ""
-		self.uid            = ""
+		self.oid             = ""
+		self.uid             = ""
 		self.ucid           = ""
 		self.Stime          = ""
 		self.Etime          = ""
@@ -45,93 +45,39 @@ class TakeShow(object):
 	'''初始化参数'''
 	def TakePat(self):
 		try:
-			self.pat     = sys.argv
-			self.Stime   = (self.pat)[1]
+			self.pat      = sys.argv
+			self.Stime  = (self.pat)[1]
 			self.Etime   = (self.pat)[2]
-			self.ucid    = (self.pat)[3]
-			self.oid     = (self.pat)[4]
-			self.uid     = (self.pat)[5]
+			self.ucid     = (self.pat)[3]
+			self.oid       = (self.pat)[4]
+			self.uid       = (self.pat)[5]
 			self.hostid  = int((self.pat)[6])
-			self.ruleid  = int((self.pat)[7])
-			self.sqlwh   = self.sqlwh%(self.uid)	
+			self.ruleid   = int((self.pat)[7])
+			self.sqlwh   = self.sqlwh%(self.uid)
 			# self.host1   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
 			# self.host2   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
 			# self.host3   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
 			self.host1   = {"host_":"192.168.241.50","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
 			self.host2   = {"host_":"192.168.241.18","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
 			self.host3   = {"host_":"192.168.241.17","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
+			if self.ruleid==1:
+				self.sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("2",self.uid)
+			if self.ruleid==2:
+				self.sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("1",self.uid)
+			if self.ruleid==3:
+				self.sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("3",self.uid)
+
 		except Exception,e:
 			print "unknow parameter"
 			print "python take_file 'filename'"
 			exit()
 
-	'''脚本ssh登录执行功能'''
-	def remote_execute(self,hostmsg):
-		talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
-		print(cmdtale)
-
-		client = paramiko.SSHClient()
-		client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-		client.connect(
-			hostmsg.get("host_",""),
-			port = hostmsg.get("port_",""),
-			username = hostmsg.get("username",""),
-			password = hostmsg.get("password",""),
-			)
-		stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
-		for i in stdout:
-			print("go=%s\n"%i)
-		return stdout
-
-
-	'''不同规则需要的执行策略'''
-	def rule_action(self,ruleid,host):
-		if ruleid==1:
-			# 先执行bin文件
-			host["cmd"]=self.cmd1
-			self.remote_execute(host)
-			# self.p.apply_async(remote_execute,args=(host,))
-			# 在执行bin_1文件
-			host["cmd"]=self.cmd2
-			self.remote_execute(host)
-			# self.p.apply_async(remote_execute,args=(host,))
-			# 需要执行不同的sql语句
-			self.sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("2",self.uid)
-		elif ruleid ==2:
-			# 执行bin_3文件
-			host["cmd"]=self.cmd3
-			# self.p.apply_async(remote_execute,args=(host,))
-			self.remote_execute(host)
-			sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("1",self.uid)
-		elif ruleid ==3:
-			#执行全部文件
-			host["cmd"]=self.cmd1
-			# self.p.apply_async(remote_execute,args=(host,))
-			self.remote_execute(host)
-			host["cmd"]=self.cmd2
-			# self.p.apply_async(remote_execute,args=(host,))
-			self.remote_execute(host)
-			host["cmd"]=self.cmd3
-			# self.p.apply_async(remote_execute,args=(host,))
-			self.remote_execute(host)
-			self.sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("3",self.uid)
-		return 0
-
-
-	def hosid_show(self):
-		print("ss")
-		if self.hostid==1:
-			self.rule_action(self.ruleid,self.host1)
-		elif self.hostid==2:
-			self.rule_action(self.ruleid,self.host2)
-		elif self.hostid==3:
-			self.rule_action(self.ruleid,self.host3)
-
 
 	'''执行计划'''
 	def ImpmentSp(self):
+		print("kaishi")
+		pool = Pool(processes=11)
 		self.TakePat()
-		# self.sig_show()
 
 		talk="start________________________________________\n"
 		print("talk=%s"%talk)
@@ -153,24 +99,45 @@ class TakeShow(object):
 				self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays))
 				self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays))
 				self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays))
-				# self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
-				# self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
-				# self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
+				# self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+				# self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+				# self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+
+				cmdall={"cmd1":self.cmd1,"cmd2":self.cmd2,"cmd3":self.cmd3}
+
 
 				# 通过hostid确定执行的命令和主机ip
-				self.hosid_show()
+				if self.hostid==1:
+					data={"ruleid":self.ruleid,"host":self.host1,"cmdall":cmdall,"uid":self.uid}
+				elif self.hostid==2:
+					data={"ruleid":self.ruleid,"host":self.host2,"cmdall":cmdall,"uid":self.uid}
+				elif self.hostid==3:
+					data={"ruleid":self.ruleid,"host":self.host3,"cmdall":cmdall,"uid":self.uid}
+
+				self.p.apply_async(rule_ac, (data, ))
+				
 			else:
 				for i in self.oid:
 					self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(i))
 					self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(i))
 					self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(i))
-					# self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
-					# self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
-					# self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s"%str(self.ShowDays)
-					
-					# 通过hostid确定执行的命令和主机ip
-					self.hosid_show()
+					# self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+					# self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+					# self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
 
+					cmdall={"cmd1":self.cmd1,"cmd2":self.cmd2,"cmd3":self.cmd3}
+
+
+					# 通过hostid确定执行的命令和主机ip
+
+					if self.hostid==1:
+						data={"ruleid":self.ruleid,"host":self.host1,"cmdall":cmdall,"uid":self.uid}
+					elif self.hostid==2:
+						data={"ruleid":self.ruleid,"host":self.host2,"cmdall":cmdall,"uid":self.uid}
+					elif self.hostid==3:
+						data={"ruleid":self.ruleid,"host":self.host3,"cmdall":cmdall,"uid":self.uid}
+
+					self.p.apply_async(rule_ac, (data, ))
 
 			com = db.execute(self.sqlcom)
 			db_show.commit()
@@ -195,6 +162,38 @@ class TakeShow(object):
 		print(sigtalk)
 
 
+
+def rule_ac(data):
+	print("pid=",os.getpid(),data.get("host",""))
+	rule_action(data.get("ruleid",""),data.get("host",""),data.get("cmdall",""),data.get("uid",""))
+
+
+'''不同规则需要的执行策略'''
+def rule_action(ruleid,host,cmdall,uid):
+	if ruleid==1:
+		# 先执行bin文件
+		host["cmd"]=cmdall.get("cmd1","")
+		remote_execute(host)
+		# 在执行bin_1文件
+		host["cmd"]=cmdall.get("cmd2","")
+		remote_execute(host)
+		# 需要执行不同的sql语句
+	elif ruleid ==2:
+		# 执行bin_3文件
+		host["cmd"]=cmdall.get("cmd3","")
+		remote_execute(host)
+		sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("1",uid)
+	elif ruleid ==3:
+		#执行全部文件
+		host["cmd"]=cmdall.get("cmd1","")
+		remote_execute(host)
+		host["cmd"]=cmdall.get("cmd2","")
+		remote_execute(host)
+		host["cmd"]=cmdall.get("cmd3","")
+		remote_execute(host)
+		sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("3",uid)
+
+
 '''脚本ssh登录执行功能'''
 def remote_execute(hostmsg):
 	talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
@@ -213,9 +212,6 @@ def remote_execute(hostmsg):
 		print("go=%s\n"%i)
 	return stdout
 
-
-def ps(x):
-	print("ssss")
 
 if __name__=='__main__':
 	Ts=TakeShow()

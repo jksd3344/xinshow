@@ -123,13 +123,13 @@ def takemassage(request):
 		"hostid":str(hostid)
 	}
 	userid=Pmsg.feedgo_createspeed(data)
-
-	cmd = "python /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py %s %s %s %s %s %s"%(Stime.strftime("%Y-%m-%d"),Etime.strftime("%Y-%m-%d"),ucid,oid,userid,hostid),
+	# 50 "/home/zzg/feed_tool/xinshow/z_ReFile/takeshow.py",
+	# "/usr/local/apache2/htdocs/xinshow/z_ReFile/takeshow.py",
+	# "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py",
+	cmd = "python /home/itcast/0420text/djangoTest/xinshow/z_ReFile/takeshow.py %s %s %s %s %s %s %s"%(Stime.strftime("%Y-%m-%d"),Etime.strftime("%Y-%m-%d"),ucid,oid,userid,hostid,str(ruleid))
 	subprocess.Popen([
 		"python",
-		# 50 "/home/zzg/feed_tool/xinshow/z_ReFile/takeshow.py",
-		"/usr/local/apache2/htdocs/xinshow/z_ReFile/takeshow.py",
-		# "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py",
+		"/usr/local/apache2/htdocs/xinshow/z_ReFile/takeshow.py",,
 		Stime.strftime("%Y-%m-%d"),
 		Etime.strftime("%Y-%m-%d"),
 		ucid,
