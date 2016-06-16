@@ -86,6 +86,7 @@ class TakeShow(object):
 
 	'''不同规则需要的执行策略'''
 	def rule_action(self,ruleid,host):
+		print("host",host)
 		if ruleid==1:
 			# 先执行bin文件
 			host["cmd"]=self.cmd1
@@ -113,7 +114,6 @@ class TakeShow(object):
 
 
 	def hosid_show(self):
-		print("ss")
 		if self.hostid==1:
 			self.rule_action(self.ruleid,self.host1)
 		elif self.hostid==2:
