@@ -25,7 +25,7 @@ class Pmsg(object):
 		self.hostid=0
 		self.suc=200
 		self.err=500
-		self.sql="SELECT SUM(%s) FROM feedgo WHERE Whether=0 AND hostid=%s"
+		self.sql="SELECT count(*) FROM feedgo WHERE Whether=0"
 
 	#存储表
 	def feedgo_createspeed(self,data):
@@ -42,6 +42,7 @@ class Pmsg(object):
 			comprogress=data.get("comprogress",""),
 			hostid=data.get("hostid","")
 			)
+		print("oid=%s"%data)
 		return userid
 	
 	#遍历表
@@ -73,33 +74,26 @@ class Pmsg(object):
 				data=0
 		return data
 
-	#查询单一机器负载数量 执行量/总量
-	def Power_calculations(self,Power,usetime,hostid):
-		data=0
+	# 查询单一机器负载数量 执行量/总量
+	def Power_calculations(self,Power,hostid):
 		strpro=0
-		compro=0
-		sqlstrpro=self.sql%("startprogress",hostid)
-		sqlcompro = self.sql%("comprogress",hostid)
-		strpro=self.take_sql(sqlstrpro)
-		compro=self.take_sql(sqlcompro)	
-		data = strpro-compro
-		if data>Power and (Power-data)<usetime:
+		strpro=self.take_sql(self.sql)
+		if strpro>Power:
 			return self.err
 		else:
 			self.hostid=hostid
 			return self.suc
 
 
-	#循环查询负载量
+	# 循环查询负载量
 	'''
 		Power:一台主机可承受的负载量
-		usetime:需要调用的脚本的天数
 		hostnum:主机数量
 	'''
-	def Power_calculation(self,Power,usetime,hostnum):
+	def Power_calculation(self,Power,hostnum):
 		data=0;start=0
 		for i in range(hostnum):
-			data=self.Power_calculations(Power,usetime,hostid=(i+1))
+			data=self.Power_calculations(Power,hostid=(i+1))
 			if data==self.suc:
 				return self.hostid	
 

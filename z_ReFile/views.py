@@ -5,6 +5,7 @@ import os
 import json
 import datetime
 import subprocess
+import random
 from model import Pmsg
 from model import feed_list
 from django.shortcuts import render
@@ -79,7 +80,7 @@ def takemassage(request):
 	start         = 0
 	usetime   = 0
 	utime       = 0
-	Power      = 1000
+	Power      = 100
 	st             = Stime.strftime("%Y-%m-%d")
 	et             = Etime.strftime("%Y-%m-%d")
 
@@ -104,39 +105,39 @@ def takemassage(request):
 		usetime=usetime*3
 
 	#如果主机已到最高负载则错误
-	hostid = Pmsg.Power_calculation(Power,usetime,hostnum=3)
-	if hostid==500:
-		start=400
-		return JsonRes(json.dumps(start))
+	# hostid = Pmsg.Power_calculation(Power,hostnum=3)
+	hostid=random.randint(1, 3)
 
-	for i in range(len(oid)):
-		data={
-			"Stime":Stime,#开始时间
-			"Etime":Etime,#结束时间
-			"ucid":ucid,#ucid
-			"oid":oid[i],#oid
-			"Whether":0,#是否结束
-			"Remarks":Remarks,#备注
-			"startprogress":usetime,#start进度
-			"comprogress":0,#com进度
-			"hostid":hostid
-		}
-		userid=Pmsg.feedgo_createspeed(data)
+	oid=','.join(oid)
+	
 
-		cmd = "python /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py %s %s %s %s %s %s"%(Stime.strftime("%Y-%m-%d"),Etime.strftime("%Y-%m-%d"),ucid,oid[i],userid,hostid),
-		subprocess.Popen([
-			"python",
-			"/home/zzg/feed_tool/xinshow/z_ReFile/takeshow.py",
-			# "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py",
-			Stime.strftime("%Y-%m-%d"),
-			Etime.strftime("%Y-%m-%d"),
-			ucid,
-			oid[i],
-			userid,
-			str(hostid),
-			str(ruleid),
-		])
-		print("cmd%s"%cmd)
+	data={
+		"Stime":Stime,#开始时间
+		"Etime":Etime,#结束时间
+		"ucid":ucid,#ucid
+		"oid":oid,#oid
+		"Whether":0,#是否结束
+		"Remarks":Remarks,#备注
+		"startprogress":usetime,#start进度
+		"comprogress":0,#com进度
+		"hostid":str(hostid)
+	}
+	userid=Pmsg.feedgo_createspeed(data)
+
+	cmd = "python /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py %s %s %s %s %s %s"%(Stime.strftime("%Y-%m-%d"),Etime.strftime("%Y-%m-%d"),ucid,oid,userid,hostid),
+	subprocess.Popen([
+		"python",
+		# "/home/zzg/feed_tool/xinshow/z_ReFile/takeshow.py",
+		"/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py",
+		Stime.strftime("%Y-%m-%d"),
+		Etime.strftime("%Y-%m-%d"),
+		ucid,
+		oid,
+		userid,
+		str(hostid),
+		str(ruleid),
+	])
+
 	start=200
 	return JsonRes(json.dumps(start))
 

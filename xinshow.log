@@ -1,0 +1,5553 @@
+Error: That port is already in use.
+Error: That port is already in use.
+Error: That port is already in use.
+[16/Jun/2016 01:53:30] "GET /z_ReFile/index/ HTTP/1.1" 200 3943
+[16/Jun/2016 01:53:30] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+[16/Jun/2016 01:53:30] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:53:30] "GET /static/css/bootstrap-datetimepicker.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:53:30] "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:53:30] "GET /static/js/jquery-1.8.3.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:53:30] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:53:30] "GET /static/js/bootstrap-datetimepicker.js HTTP/1.1" 304 0
+[16/Jun/2016 01:53:30] "GET /static/js/bootstrap-datetimepicker.fr.js HTTP/1.1" 304 0
+[16/Jun/2016 01:53:30] "GET /static/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 304 0
+[16/Jun/2016 01:53:52] "POST /z_ReFile/takemassage/ HTTP/1.1" 200 5
+[16/Jun/2016 01:54:01] "POST /z_ReFile/takemassage/ HTTP/1.1" 200 5
+[16/Jun/2016 01:54:10] "POST /z_ReFile/takemassage/ HTTP/1.1" 200 5
+[16/Jun/2016 01:54:15] "POST /z_ReFile/takemassage/ HTTP/1.1" 500 14186
+[16/Jun/2016 01:54:29] "GET /z_ReFile/Runmsg/ HTTP/1.1" 404 3163
+[16/Jun/2016 01:54:37] "GET /z_ReFile/Runmsg/1/ HTTP/1.1" 200 4837
+[16/Jun/2016 01:54:39] "GET /z_ReFile/Runmsg/8/ HTTP/1.1" 200 3427
+[16/Jun/2016 01:54:41] "GET /z_ReFile/index/ HTTP/1.1" 200 3943
+[16/Jun/2016 01:54:41] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+[16/Jun/2016 01:54:41] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:54:41] "GET /static/css/bootstrap-datetimepicker.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:54:41] "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:54:41] "GET /static/js/jquery-1.8.3.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:54:41] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:54:41] "GET /static/js/bootstrap-datetimepicker.js HTTP/1.1" 304 0
+[16/Jun/2016 01:54:41] "GET /static/js/bootstrap-datetimepicker.fr.js HTTP/1.1" 304 0
+[16/Jun/2016 01:54:42] "GET /static/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 304 0
+[16/Jun/2016 01:55:00] "POST /z_ReFile/takemassage/ HTTP/1.1" 500 14191
+[16/Jun/2016 01:55:03] "POST /z_ReFile/takemassage/ HTTP/1.1" 500 14191
+[16/Jun/2016 01:55:03] "POST /z_ReFile/takemassage/ HTTP/1.1" 500 14191
+[16/Jun/2016 01:55:03] "POST /z_ReFile/takemassage/ HTTP/1.1" 500 14191
+[16/Jun/2016 01:55:03] "POST /z_ReFile/takemassage/ HTTP/1.1" 500 14191
+[16/Jun/2016 01:55:07] "POST /z_ReFile/takemassage/ HTTP/1.1" 500 14145
+[16/Jun/2016 01:55:08] "POST /z_ReFile/takemassage/ HTTP/1.1" 500 14145
+[16/Jun/2016 01:55:09] "POST /z_ReFile/takemassage/ HTTP/1.1" 500 14145
+[16/Jun/2016 01:55:09] "POST /z_ReFile/takemassage/ HTTP/1.1" 500 14145
+[16/Jun/2016 01:55:09] "GET /z_ReFile/index/ HTTP/1.1" 200 3943
+[16/Jun/2016 01:55:10] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+[16/Jun/2016 01:55:10] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:55:10] "GET /static/css/bootstrap-datetimepicker.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:55:10] "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:55:10] "GET /static/js/jquery-1.8.3.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:55:10] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:55:10] "GET /static/js/bootstrap-datetimepicker.js HTTP/1.1" 304 0
+[16/Jun/2016 01:55:10] "GET /static/js/bootstrap-datetimepicker.fr.js HTTP/1.1" 304 0
+[16/Jun/2016 01:55:10] "GET /static/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 304 0
+[16/Jun/2016 01:55:21] "POST /z_ReFile/takemassage/ HTTP/1.1" 500 14145
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 16, 2016 - 01:53:29
+Django version 1.8.4, using settings 'xin_show.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[16/Jun/2016 01:55:44] "GET /z_ReFile/index/ HTTP/1.1" 200 3943
+[16/Jun/2016 01:55:44] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+[16/Jun/2016 01:55:44] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:55:44] "GET /static/css/bootstrap-datetimepicker.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:55:44] "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:55:44] "GET /static/js/jquery-1.8.3.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:55:44] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:55:44] "GET /static/js/bootstrap-datetimepicker.js HTTP/1.1" 304 0
+[16/Jun/2016 01:55:44] "GET /static/js/bootstrap-datetimepicker.fr.js HTTP/1.1" 304 0
+[16/Jun/2016 01:55:45] "GET /static/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 304 0
+[16/Jun/2016 01:55:49] "POST /z_ReFile/takemassage/ HTTP/1.1" 500 14135
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 16, 2016 - 01:55:42
+Django version 1.8.4, using settings 'xin_show.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[16/Jun/2016 01:56:31] "GET /z_ReFile/index/ HTTP/1.1" 200 3943
+[16/Jun/2016 01:56:31] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+[16/Jun/2016 01:56:31] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:56:31] "GET /static/css/bootstrap-datetimepicker.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:56:31] "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:56:31] "GET /static/js/jquery-1.8.3.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:56:31] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:56:31] "GET /static/js/bootstrap-datetimepicker.js HTTP/1.1" 304 0
+[16/Jun/2016 01:56:31] "GET /static/js/bootstrap-datetimepicker.fr.js HTTP/1.1" 304 0
+[16/Jun/2016 01:56:32] "GET /static/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 304 0
+[16/Jun/2016 01:56:36] "POST /z_ReFile/takemassage/ HTTP/1.1" 200 5
+[16/Jun/2016 01:56:37] "GET /z_ReFile/Runmsg/1/ HTTP/1.1" 200 4837
+[16/Jun/2016 01:57:03] "GET /z_ReFile/Runmsg/8/ HTTP/1.1" 200 3708
+[16/Jun/2016 01:57:08] "GET /z_ReFile/Runmsg/8/ HTTP/1.1" 200 3708
+[16/Jun/2016 01:57:08] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:08] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:08] "GET /static/css/bootstrap-datetimepicker.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:08] "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:08] "GET /static/js/jquery-1.8.3.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:08] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:08] "GET /static/js/bootstrap-datetimepicker.fr.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:08] "GET /static/js/bootstrap-datetimepicker.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:10] "GET /z_ReFile/Runmsg/8/ HTTP/1.1" 200 3708
+[16/Jun/2016 01:57:10] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:10] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:10] "GET /static/css/bootstrap-datetimepicker.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:10] "GET /static/js/jquery-1.8.3.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:10] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:10] "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:10] "GET /static/js/bootstrap-datetimepicker.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:10] "GET /static/js/bootstrap-datetimepicker.fr.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:11] "GET /z_ReFile/Runmsg/8/ HTTP/1.1" 200 3708
+[16/Jun/2016 01:57:11] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:11] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:11] "GET /static/css/bootstrap-datetimepicker.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:11] "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:11] "GET /static/js/jquery-1.8.3.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:11] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:11] "GET /static/js/bootstrap-datetimepicker.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:11] "GET /static/js/bootstrap-datetimepicker.fr.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:12] "GET /z_ReFile/Runmsg/8/ HTTP/1.1" 200 3708
+[16/Jun/2016 01:57:12] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:12] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:12] "GET /static/css/bootstrap-datetimepicker.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:12] "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:12] "GET /static/js/jquery-1.8.3.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:12] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:12] "GET /static/js/bootstrap-datetimepicker.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:12] "GET /static/js/bootstrap-datetimepicker.fr.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:13] "GET /z_ReFile/Runmsg/8/ HTTP/1.1" 200 3708
+[16/Jun/2016 01:57:13] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:13] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:13] "GET /static/css/bootstrap-datetimepicker.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:13] "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:13] "GET /static/js/jquery-1.8.3.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:13] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:13] "GET /static/js/bootstrap-datetimepicker.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:13] "GET /static/js/bootstrap-datetimepicker.fr.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:14] "GET /z_ReFile/Runmsg/8/ HTTP/1.1" 200 3708
+[16/Jun/2016 01:57:14] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:14] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:14] "GET /static/css/bootstrap-datetimepicker.min.css HTTP/1.1" 304 0
+[16/Jun/2016 01:57:14] "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:14] "GET /static/js/jquery-1.8.3.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:14] "GET /static/js/bootstrap-datetimepicker.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:14] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:14] "GET /static/js/bootstrap-datetimepicker.fr.js HTTP/1.1" 304 0
+[16/Jun/2016 01:57:16] "GET /z_ReFile/index/ HTTP/1.1" 200 3943
+[16/Jun/2016 01:57:16] "GET /static/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 304 0
+[16/Jun/2016 01:57:45] "POST /z_ReFile/takemassage/ HTTP/1.1" 500 16977
+No handlers could be found for logger "paramiko.transport"
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+Traceback (most recent call last):
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 193, in <module>
+    Ts.ImpmentSp()
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 167, in ImpmentSp
+    self.rule_action(self.ruleid,self.host3)
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 108, in rule_action
+    self.remote_execute(host)
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 77, in remote_execute
+    password = hostmsg.get("password",""),
+  File "/home/itcast/.virtualenvs/.virtualenvs/jksd3344/local/lib/python2.7/site-packages/paramiko-2.0.0-py2.7.egg/paramiko/client.py", line 338, in connect
+  File "/home/itcast/.virtualenvs/.virtualenvs/jksd3344/local/lib/python2.7/site-packages/paramiko-2.0.0-py2.7.egg/paramiko/transport.py", line 493, in start_client
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+No handlers could be found for logger "paramiko.transport"
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+Traceback (most recent call last):
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 193, in <module>
+    Ts.ImpmentSp()
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 167, in ImpmentSp
+    self.rule_action(self.ruleid,self.host3)
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 108, in rule_action
+    self.remote_execute(host)
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 77, in remote_execute
+    password = hostmsg.get("password",""),
+  File "/home/itcast/.virtualenvs/.virtualenvs/jksd3344/local/lib/python2.7/site-packages/paramiko-2.0.0-py2.7.egg/paramiko/client.py", line 338, in connect
+  File "/home/itcast/.virtualenvs/.virtualenvs/jksd3344/local/lib/python2.7/site-packages/paramiko-2.0.0-py2.7.egg/paramiko/transport.py", line 493, in start_client
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+No handlers could be found for logger "paramiko.transport"
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-13:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-12:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+Traceback (most recent call last):
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 193, in <module>
+    Ts.ImpmentSp()
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 167, in ImpmentSp
+    self.rule_action(self.ruleid,self.host3)
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 112, in rule_action
+    self.remote_execute(host)
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 77, in remote_execute
+    password = hostmsg.get("password",""),
+  File "/home/itcast/.virtualenvs/.virtualenvs/jksd3344/local/lib/python2.7/site-packages/paramiko-2.0.0-py2.7.egg/paramiko/client.py", line 338, in connect
+  File "/home/itcast/.virtualenvs/.virtualenvs/jksd3344/local/lib/python2.7/site-packages/paramiko-2.0.0-py2.7.egg/paramiko/transport.py", line 493, in start_client
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+[16/Jun/2016 01:58:01] "GET /z_ReFile/takemassage/ HTTP/1.1" 500 78873
+[16/Jun/2016 01:58:33] "POST /z_ReFile/takemassage/ HTTP/1.1" 500 16977
+No handlers could be found for logger "paramiko.transport"
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+Traceback (most recent call last):
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 193, in <module>
+    Ts.ImpmentSp()
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 163, in ImpmentSp
+    self.rule_action(self.ruleid,self.host1)
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 94, in rule_action
+    self.remote_execute(host)
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 77, in remote_execute
+    password = hostmsg.get("password",""),
+  File "/home/itcast/.virtualenvs/.virtualenvs/jksd3344/local/lib/python2.7/site-packages/paramiko-2.0.0-py2.7.egg/paramiko/client.py", line 338, in connect
+  File "/home/itcast/.virtualenvs/.virtualenvs/jksd3344/local/lib/python2.7/site-packages/paramiko-2.0.0-py2.7.egg/paramiko/transport.py", line 493, in start_client
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+No handlers could be found for logger "paramiko.transport"
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-13:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+Traceback (most recent call last):
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 193, in <module>
+    Ts.ImpmentSp()
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 167, in ImpmentSp
+    self.rule_action(self.ruleid,self.host3)
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 108, in rule_action
+    self.remote_execute(host)
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 77, in remote_execute
+    password = hostmsg.get("password",""),
+  File "/home/itcast/.virtualenvs/.virtualenvs/jksd3344/local/lib/python2.7/site-packages/paramiko-2.0.0-py2.7.egg/paramiko/client.py", line 338, in connect
+  File "/home/itcast/.virtualenvs/.virtualenvs/jksd3344/local/lib/python2.7/site-packages/paramiko-2.0.0-py2.7.egg/paramiko/transport.py", line 493, in start_client
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+No handlers could be found for logger "paramiko.transport"
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-13:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+Traceback (most recent call last):
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 193, in <module>
+    Ts.ImpmentSp()
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 167, in ImpmentSp
+    self.rule_action(self.ruleid,self.host3)
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 108, in rule_action
+    self.remote_execute(host)
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 77, in remote_execute
+    password = hostmsg.get("password",""),
+  File "/home/itcast/.virtualenvs/.virtualenvs/jksd3344/local/lib/python2.7/site-packages/paramiko-2.0.0-py2.7.egg/paramiko/client.py", line 338, in connect
+  File "/home/itcast/.virtualenvs/.virtualenvs/jksd3344/local/lib/python2.7/site-packages/paramiko-2.0.0-py2.7.egg/paramiko/transport.py", line 493, in start_client
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+[16/Jun/2016 01:58:44] "POST /z_ReFile/takemassage/ HTTP/1.1" 200 5
+[16/Jun/2016 01:58:46] "GET /z_ReFile/Runmsg/1/ HTTP/1.1" 200 5067
+No handlers could be found for logger "paramiko.transport"
+No handlers could be found for logger "paramiko.transport"
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+Traceback (most recent call last):
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 193, in <module>
+    Ts.ImpmentSp()
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 163, in ImpmentSp
+    self.rule_action(self.ruleid,self.host1)
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 97, in rule_action
+    self.remote_execute(host)
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 77, in remote_execute
+    password = hostmsg.get("password",""),
+  File "/home/itcast/.virtualenvs/.virtualenvs/jksd3344/local/lib/python2.7/site-packages/paramiko-2.0.0-py2.7.egg/paramiko/client.py", line 338, in connect
+  File "/home/itcast/.virtualenvs/.virtualenvs/jksd3344/local/lib/python2.7/site-packages/paramiko-2.0.0-py2.7.egg/paramiko/transport.py", line 493, in start_client
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+Traceback (most recent call last):
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 193, in <module>
+    Ts.ImpmentSp()
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 163, in ImpmentSp
+    self.rule_action(self.ruleid,self.host1)
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 97, in rule_action
+    self.remote_execute(host)
+  File "/home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py", line 77, in remote_execute
+    password = hostmsg.get("password",""),
+  File "/home/itcast/.virtualenvs/.virtualenvs/jksd3344/local/lib/python2.7/site-packages/paramiko-2.0.0-py2.7.egg/paramiko/client.py", line 338, in connect
+  File "/home/itcast/.virtualenvs/.virtualenvs/jksd3344/local/lib/python2.7/site-packages/paramiko-2.0.0-py2.7.egg/paramiko/transport.py", line 493, in start_client
+paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+[16/Jun/2016 01:58:54] "GET /z_ReFile/Runmsg/12 HTTP/1.1" 301 0
+[16/Jun/2016 01:58:55] "GET /z_ReFile/Runmsg/12/ HTTP/1.1" 200 4506
+[16/Jun/2016 01:58:56] "GET /z_ReFile/Runmsg/11 HTTP/1.1" 301 0
+[16/Jun/2016 01:58:57] "GET /z_ReFile/Runmsg/11/ HTTP/1.1" 200 5082
+[16/Jun/2016 01:58:59] "GET /z_ReFile/Runmsg/10/ HTTP/1.1" 200 5081
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 16, 2016 - 01:56:28
+Django version 1.8.4, using settings 'xin_show.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-05-11 2016-06-16 22 22 43322016 3
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-09 2016-06-16 21 22 76402016 3
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-09 2016-06-16 21 23 12162016 3
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-09 2016-06-16 21 35 73362016 3
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-09 2016-06-16 21 56 59902016 3
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-09 2016-06-16 21 32 1042016 3
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-09 2016-06-16 21 21 90932016 3
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-09 2016-06-16 21 56 86742016 3
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-09 2016-06-16 21 321 82792016 3
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-09 2016-06-16 21 123 40542016 3
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-09 2016-06-16 21 213 60212016 3
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-09 2016-06-16 21 664 43342016 3
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-09 2016-06-16 21 3421 7912016 3
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-09 2016-06-16 21 312 42342016 3
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-09 2016-06-16 21 231 78742016 3
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-09 2016-06-16 21 312 50672016 3
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 22 82892016 1
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 23 53372016 1
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 35 32272016 1
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 56 95132016 1
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 32 8262016 1
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 21 7462016 1
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 56 39292016 1
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 321 21222016 1
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 123 84372016 1
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 213 72582016 1
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 664 94792016 1
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 3421 30992016 1
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 312 21252016 1
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 231 39752016 1
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 312 89342016 1
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 22 65132016 2
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 23 25582016 2
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 35 26362016 2
+cmdpython /home/itcast/0420text/djantext/xinshow/z_ReFile/takeshow.py 2016-06-14 2016-06-16 21 5 45842016 2
+Error: That port is already in use.
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:72582016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:95132016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:32272016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:39292016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:21222016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:82892016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:53372016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:8262016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:7462016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:94792016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:89342016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:30992016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:45842016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:65132016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:26362016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:25582016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-13:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-12:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-11:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-10:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-09:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:12162016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-13:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-12:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-11:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-10:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-09:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:1042016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-13:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-12:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-11:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-10:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-09:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:43342016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-13:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-12:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-11:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-10:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-09:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:73362016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-13:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-12:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-11:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-10:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-09:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:40542016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-13:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-12:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-11:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-10:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-09:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:42342016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-13:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-12:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-11:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-10:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-09:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:82792016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-13:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-12:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-11:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-10:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-09:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:86742016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-13:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-12:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-11:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-10:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-09:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:60212016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-13:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-12:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-11:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-10:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-09:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:7912016:--------End--------
+
+talk=start________________________________________
+
+talk=2016-06-16:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-16
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-15:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-15
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-14:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-14
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-13:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-13
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-12:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-12
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-11:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-11
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-10:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-10
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+talk=2016-06-09:success
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+cmd=cd /home/itcast/testy;./sleepTest.o 2016-06-09
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+std===:sssssss
+
+id:90932016:--------End--------
+
+[16/Jun/2016 02:00:17] "GET /z_ReFile/Runmsg/10/ HTTP/1.1" 200 5064
+[16/Jun/2016 02:00:17] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+[16/Jun/2016 02:00:17] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[16/Jun/2016 02:00:17] "GET /static/css/bootstrap-datetimepicker.min.css HTTP/1.1" 304 0
+[16/Jun/2016 02:00:17] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[16/Jun/2016 02:00:17] "GET /static/js/jquery-1.8.3.min.js HTTP/1.1" 304 0
+[16/Jun/2016 02:00:17] "GET /static/js/bootstrap-datetimepicker.fr.js HTTP/1.1" 304 0
+[16/Jun/2016 02:00:17] "GET /static/js/bootstrap-datetimepicker.js HTTP/1.1" 304 0
+[16/Jun/2016 02:00:17] "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+[16/Jun/2016 02:00:19] "GET /z_ReFile/Runmsg/11/ HTTP/1.1" 200 5064
+[16/Jun/2016 02:00:21] "GET /z_ReFile/Runmsg/12/ HTTP/1.1" 200 4491
+[16/Jun/2016 02:00:22] "GET /z_ReFile/Runmsg/11/ HTTP/1.1" 200 5064
+[16/Jun/2016 02:00:24] "GET /z_ReFile/Runmsg/10/ HTTP/1.1" 200 5064
+[16/Jun/2016 02:00:26] "GET /z_ReFile/Runmsg/9/ HTTP/1.1" 200 5073
+[16/Jun/2016 02:00:27] "GET /z_ReFile/Runmsg/10/ HTTP/1.1" 200 5064
+[16/Jun/2016 02:00:29] "GET /z_ReFile/Runmsg/9/ HTTP/1.1" 200 5073
+[16/Jun/2016 02:00:30] "GET /z_ReFile/Runmsg/8/ HTTP/1.1" 200 5079
+[16/Jun/2016 02:00:32] "GET /z_ReFile/Runmsg/7 HTTP/1.1" 301 0
+[16/Jun/2016 02:00:32] "GET /z_ReFile/Runmsg/7/ HTTP/1.1" 200 5095
+[16/Jun/2016 02:00:33] "GET /z_ReFile/Runmsg/8/ HTTP/1.1" 200 5079
+[16/Jun/2016 02:00:37] "GET /z_ReFile/Runmsg/9/ HTTP/1.1" 200 5073
+[16/Jun/2016 02:00:38] "GET /z_ReFile/Runmsg/10/ HTTP/1.1" 200 5064
+[16/Jun/2016 02:00:39] "GET /z_ReFile/Runmsg/11/ HTTP/1.1" 200 5064
+[16/Jun/2016 02:00:39] "GET /z_ReFile/Runmsg/12/ HTTP/1.1" 200 4491
+[16/Jun/2016 02:00:41] "GET /z_ReFile/Runmsg/11/ HTTP/1.1" 200 5064
+[16/Jun/2016 02:00:42] "GET /z_ReFile/Runmsg/10/ HTTP/1.1" 200 5064
+[16/Jun/2016 02:00:43] "GET /z_ReFile/Runmsg/9/ HTTP/1.1" 200 5073
+[16/Jun/2016 02:01:03] "GET /z_ReFile/Runmsg/9/ HTTP/1.1" 200 5073
+[16/Jun/2016 02:01:03] "GET /static/css/bootstrap.css HTTP/1.1" 304 0
+[16/Jun/2016 02:01:03] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[16/Jun/2016 02:01:03] "GET /static/css/bootstrap-datetimepicker.min.css HTTP/1.1" 304 0
+[16/Jun/2016 02:01:03] "GET /static/js/jquery.min.js HTTP/1.1" 304 0
+[16/Jun/2016 02:01:03] "GET /static/js/jquery-1.8.3.min.js HTTP/1.1" 304 0
+[16/Jun/2016 02:01:03] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[16/Jun/2016 02:01:03] "GET /static/js/bootstrap-datetimepicker.js HTTP/1.1" 304 0
+[16/Jun/2016 02:01:03] "GET /static/js/bootstrap-datetimepicker.fr.js HTTP/1.1" 304 0
+[16/Jun/2016 02:01:04] "GET /z_ReFile/Runmsg/12/ HTTP/1.1" 200 4491
+[16/Jun/2016 02:01:07] "GET /z_ReFile/Runmsg/11/ HTTP/1.1" 200 5064
+[16/Jun/2016 02:01:10] "GET /z_ReFile/Runmsg/9/ HTTP/1.1" 200 5073
+[16/Jun/2016 02:01:11] "GET /z_ReFile/Runmsg/10/ HTTP/1.1" 200 5064
+[16/Jun/2016 02:01:13] "GET /z_ReFile/Runmsg/8/ HTTP/1.1" 200 5079
+[16/Jun/2016 02:01:14] "GET /z_ReFile/Runmsg/7/ HTTP/1.1" 200 5095
+[16/Jun/2016 02:01:15] "GET /z_ReFile/Runmsg/6/ HTTP/1.1" 200 5067
+[16/Jun/2016 02:01:16] "GET /z_ReFile/Runmsg/7/ HTTP/1.1" 200 5095
+[16/Jun/2016 02:01:17] "GET /z_ReFile/Runmsg/8/ HTTP/1.1" 200 5079
+[16/Jun/2016 02:01:19] "GET /z_ReFile/Runmsg/9/ HTTP/1.1" 200 5073
+[16/Jun/2016 02:01:21] "GET /z_ReFile/Runmsg/10/ HTTP/1.1" 200 5064
+[16/Jun/2016 02:01:23] "GET /z_ReFile/Runmsg/11/ HTTP/1.1" 200 5064
+[16/Jun/2016 02:01:24] "GET /z_ReFile/Runmsg/12/ HTTP/1.1" 200 4491
+[16/Jun/2016 02:01:26] "GET /z_ReFile/Runmsg/11/ HTTP/1.1" 200 5064
+[16/Jun/2016 02:01:27] "GET /z_ReFile/Runmsg/12/ HTTP/1.1" 200 4491
+[16/Jun/2016 02:01:30] "GET /z_ReFile/Runmsg/11/ HTTP/1.1" 200 5064
+[16/Jun/2016 02:01:31] "GET /z_ReFile/Runmsg/10/ HTTP/1.1" 200 5064
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 16, 2016 - 02:00:16
+Django version 1.8.4, using settings 'xin_show.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[16/Jun/2016 02:07:35] "GET /z_ReFile/Runmsg/12/ HTTP/1.1" 200 4491
+[16/Jun/2016 02:07:37] "GET /z_ReFile/Runmsg/11/ HTTP/1.1" 200 5064
+[16/Jun/2016 02:07:39] "GET /z_ReFile/Runmsg/10/ HTTP/1.1" 200 5064
+[16/Jun/2016 02:07:41] "GET /z_ReFile/Runmsg/9/ HTTP/1.1" 200 5073
+[16/Jun/2016 02:07:43] "GET /z_ReFile/Runmsg/8/ HTTP/1.1" 200 5079
+[16/Jun/2016 02:07:47] "GET /z_ReFile/Runmsg/7/ HTTP/1.1" 200 5095
+[16/Jun/2016 02:07:49] "GET /z_ReFile/Runmsg/8/ HTTP/1.1" 200 5079
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 16, 2016 - 02:03:17
+Django version 1.8.4, using settings 'xin_show.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Error: That port is already in use.
+Error: That port is already in use.
