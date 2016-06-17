@@ -15,9 +15,10 @@ db = db_show.cursor()
 
 
 import logging
+import logging
 log_file = "./basic_logger.log"
 logging.basicConfig(filename = log_file, level = logging.DEBUG)
-logging.info("this is a infomsg!")
+
 
 class ruleid_sql(object):
 	def __init__(self,uid,ruleid):
@@ -232,7 +233,7 @@ def remote_execute(hostmsg,ruleid,uid):
 	stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
 	for i in stdout:
 		print("go=%s\n"%i)
-		logging.info(i)
+		logging.info("stdout=%s"%i)
 
 	sqlcom=ruleid.take()
 	com = db.execute(sqlcom)

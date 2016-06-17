@@ -124,3 +124,58 @@ STATICFILES_DIRS=(
     STATIC_PATH,
 )
 
+SITE_ROOT=os.path.join(os.path.abspath(os.path.dirname(__file__)))
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'standardTime': {
+                'format': '%(asctime)s %(levelname)s %(module)s.%(funcName)s Line:%(lineno)d%(message)s'
+                },
+        'standardFile': {
+                'format': '%(levelname)s %(asctime)s %(message)s'
+                },
+        "ingestion":{
+                "format": "%(asctime)s %(message)s"
+        }
+    },
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(SITE_ROOT,'log.log'),
+            'maxBytes':1024*1024*5,
+            'backupCount': 5,
+            'formatter':'standardFile',
+        },
+        'console':{            
+            'level':'DEBUG',            
+            'class':'logging.StreamHandler',        
+        },
+        "ingestion_log_file": {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(SITE_ROOT,'ingestion_log.log'),
+            'maxBytes':1024*1024*5,
+            'backupCount': 5,
+            'formatter':'ingestion',
+        }
+    },
+    'loggers': {
+        'all_project': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'ingestion_log': {
+            'handlers': ['ingestion_log_file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'django.db.backends': {
+            'handlers': ['console'],
+            'propagate': True,
+            'level':'DEBUG',
+        },
+    }
+}
