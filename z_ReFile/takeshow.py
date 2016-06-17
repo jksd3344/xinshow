@@ -13,11 +13,12 @@ from multiprocessing import Pool
 db_show = MySQLdb.connect(host="123.57.226.182",user="root",passwd="Jksd3344",db="Shake",charset="utf8")   
 db = db_show.cursor()
 
-import logging
-log_file = "./basic_logger.log"
-logging.basicConfig(filename = log_file, level = logging.DEBUG)
-logging.info("this is a infomsg!")
 
+def writelog(prints):
+	filename="filelog.txt"
+	fs = open(filename,"a+")
+	fs.write(prints)
+	fs.close()
 
 class ruleid_sql(object):
 	def __init__(self,uid,ruleid):
@@ -115,7 +116,7 @@ class TakeShow(object):
 
 			talk="%s:success\n"%self.ShowDays
 			print("talk=%s"%talk)
-			logging.info(talk)
+			writelog(talk)
 
 			if self.oid==["0"]:
 				self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays))
@@ -161,11 +162,14 @@ class TakeShow(object):
 
 					self.p.apply_async(rule_ac, (data, ))
 
+
+
+
 		self.p.close()
 		self.p.join()
 		talk="id:%s:--------End--------\n"%self.uid
 		print(talk)
-		logging.info(talk)
+		writelog(talk)
 		wh=db.execute(self.sqlwh)
 		db.close() 
 
@@ -184,7 +188,7 @@ class TakeShow(object):
 def rule_ac(data):
 	pd="ruleid%s,host=%s,uid=%s"%(data.get("ruleid",""),data.get("host",""),data.get("uid",""))
 	print("pd=%s"%pd)
-	logging.info(pd)
+	writelog(pd)
 	rule_action(data.get("ruleid",""),data.get("host",""),data.get("cmdall",""),data.get("uid",""))
 
 
@@ -216,7 +220,6 @@ def rule_action(ruleid,host,cmdall,uid):
 '''脚本ssh登录执行功能'''
 def remote_execute(hostmsg,ruleid,uid):
 	talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
-	logging.info(cmdtale)
 	ruleid=ruleid_sql(uid,ruleid)
 	client = paramiko.SSHClient()
 	client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -229,7 +232,7 @@ def remote_execute(hostmsg,ruleid,uid):
 	stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
 	for i in stdout:
 		print("go=%s\n"%i)
-		logging.info(i)
+		writelog(i)
 
 	sqlcom=ruleid.take()
 	com = db.execute(sqlcom)
