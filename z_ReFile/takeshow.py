@@ -14,6 +14,23 @@ db_show = MySQLdb.connect(host="123.57.226.182",user="root",passwd="Jksd3344",db
 db = db_show.cursor()
 
 
+class ruleid_sql(object):
+	def __init__(self,uid,ruleid):
+		self.uid =uid
+		self.ruleid=ruleid
+
+	def take(self):
+		sqlcom=""
+		print("takeruler")
+		if self.ruleid==1:
+			sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("2",self.uid)
+		if self.ruleid==2:
+			sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("1",self.uid)
+		if self.ruleid==3:
+			sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("3",self.uid)
+
+		return sqlcom
+
 '''定义脚本输出类'''
 class TakeShow(object):
 	def __init__(self):
@@ -54,12 +71,12 @@ class TakeShow(object):
 			self.hostid  = int((self.pat)[6])
 			self.ruleid   = int((self.pat)[7])
 			self.sqlwh   = self.sqlwh%(self.uid)
-			# self.host1   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
-			# self.host2   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
-			# self.host3   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
-			self.host1   = {"host_":"192.168.241.50","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
-			self.host2   = {"host_":"192.168.241.18","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
-			self.host3   = {"host_":"192.168.241.17","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
+			self.host1   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
+			self.host2   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
+			self.host3   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
+			# self.host1   = {"host_":"192.168.241.50","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
+			# self.host2   = {"host_":"192.168.241.18","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
+			# self.host3   = {"host_":"192.168.241.17","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
 			if self.ruleid==1:
 				self.sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("2",self.uid)
 			if self.ruleid==2:
@@ -86,7 +103,8 @@ class TakeShow(object):
 		Etime    = datetime.datetime.strptime(self.Etime,"%Y-%m-%d")
 		difdays = (Etime-Stime).days
 		self.oid = self.oid.split(',')
-	
+
+
 		# 执行次数为日期之差
 		for i in range(difdays+1):
 			days = datetime.timedelta(days=i)
@@ -96,12 +114,12 @@ class TakeShow(object):
 			print("talk=%s"%talk)
 
 			if self.oid==["0"]:
-				self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays))
-				self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays))
-				self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays))
-				# self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
-				# self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
-				# self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+				# self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays))
+				# self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays))
+				# self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays))
+				self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+				self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+				self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
 
 				cmdall={"cmd1":self.cmd1,"cmd2":self.cmd2,"cmd3":self.cmd3}
 
@@ -118,12 +136,12 @@ class TakeShow(object):
 				
 			else:
 				for i in self.oid:
-					self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(i))
-					self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(i))
-					self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(i))
-					# self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
-					# self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
-					# self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+					# self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(i))
+					# self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(i))
+					# self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(i))
+					self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+					self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+					self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
 
 					cmdall={"cmd1":self.cmd1,"cmd2":self.cmd2,"cmd3":self.cmd3}
 
@@ -138,9 +156,6 @@ class TakeShow(object):
 						data={"ruleid":self.ruleid,"host":self.host3,"cmdall":cmdall,"uid":self.uid}
 
 					self.p.apply_async(rule_ac, (data, ))
-
-			com = db.execute(self.sqlcom)
-			db_show.commit()
 
 		wh=db.execute(self.sqlwh)
 		db.close() 
@@ -166,6 +181,11 @@ class TakeShow(object):
 def rule_ac(data):
 	print("pid=",os.getpid(),data.get("host",""))
 	rule_action(data.get("ruleid",""),data.get("host",""),data.get("cmdall",""),data.get("uid",""))
+	ruleid=ruleid_sql(data.get("uid",""),data.get("ruleid",""))
+	sqlcom=ruleid.take()
+	com = db.execute(sqlcom)
+	db_show.commit()
+
 
 
 '''不同规则需要的执行策略'''
@@ -173,29 +193,29 @@ def rule_action(ruleid,host,cmdall,uid):
 	if ruleid==1:
 		# 先执行bin文件
 		host["cmd"]=cmdall.get("cmd1","")
-		remote_execute(host)
+		remote_execute(host,ruleid,uid)
 		# 在执行bin_1文件
 		host["cmd"]=cmdall.get("cmd2","")
-		remote_execute(host)
+		remote_execute(host,ruleid,uid)
 		# 需要执行不同的sql语句
 	elif ruleid ==2:
 		# 执行bin_3文件
 		host["cmd"]=cmdall.get("cmd3","")
-		remote_execute(host)
-		sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("1",uid)
+		remote_execute(host,ruleid,uid)
+
 	elif ruleid ==3:
 		#执行全部文件
 		host["cmd"]=cmdall.get("cmd1","")
-		remote_execute(host)
+		remote_execute(host,ruleid,uid)
 		host["cmd"]=cmdall.get("cmd2","")
-		remote_execute(host)
+		remote_execute(host,ruleid,uid)
 		host["cmd"]=cmdall.get("cmd3","")
-		remote_execute(host)
-		sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("3",uid)
+		remote_execute(host,ruleid,uid)
+
 
 
 '''脚本ssh登录执行功能'''
-def remote_execute(hostmsg):
+def remote_execute(hostmsg,ruleid,uid):
 	talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
 	print(cmdtale)
 
@@ -210,6 +230,7 @@ def remote_execute(hostmsg):
 	stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
 	for i in stdout:
 		print("go=%s\n"%i)
+
 	return stdout
 
 
