@@ -89,46 +89,50 @@
 
 	$('.form_datetime').datetimepicker('update', new Date());
 
+	var fm=true
 	function takemassage()
 	{
-		Stime = $("#Stime").val();
-		Etime = $("#Etime").val();
-		ucid   = $("#ucid").val();
-		oid     = $("#oid").val();
-		Remarks     = $("#remarks").val();
+		if(fm==true){
+			Stime = $("#Stime").val();
+			Etime = $("#Etime").val();
+			ucid   = $("#ucid").val();
+			oid     = $("#oid").val();
+			Remarks     = $("#remarks").val();
 
-		if(Stime==""||Etime==""||ucid==""||Remarks=="")
-		{
-			alert("您有项目没有填写")
-			return 0
-		}
-		if(oid=="")
-		{
-			oid="0"
-		}
-		$.ajax({
-			url:"/z_ReFile/takemassage/",
-			type:"post",
-			data:{"Stime":Stime,"Etime":Etime,"ucid":ucid,"Remarks":Remarks,"oid":oid},
-			success:function(msg)
+			if(Stime==""||Etime==""||ucid==""||Remarks=="")
 			{
-				if(msg==200)
-				{
-					// window.location.href="http://112.253.2.61:8090/z_ReFile/Runmsg/1"
-					window.location.href="/z_ReFile/Runmsg/1"					
-				}else if(msg==500)
-				{
-					alert("开始时间必须小于结束时间")
-				}else if(msg==400)
-				{
-					alert("主机需要休息一下")
-				}else if(msg==300)
-				{
-					alert("您提交了太多任务,宝宝处理不过来了")
-				}
-
+				alert("您有项目没有填写")
+				return 0
 			}
-		})
+			if(oid=="")
+			{
+				oid="0"
+			}
+			$.ajax({
+				url:"/z_ReFile/takemassage/",
+				type:"post",
+				data:{"Stime":Stime,"Etime":Etime,"ucid":ucid,"Remarks":Remarks,"oid":oid},
+				async:false,
+				success:function(msg)
+				{
+					if(msg==200)
+					{
+						// window.location.href="http://112.253.2.61:8090/z_ReFile/Runmsg/1"
+						window.location.href="/z_ReFile/Runmsg/1"					
+					}else if(msg==500)
+					{
+						alert("开始时间必须小于结束时间")
+					}else if(msg==400)
+					{
+						alert("主机需要休息一下")
+					}else if(msg==300)
+					{
+						alert("您提交了太多任务,宝宝处理不过来了")
+					}
+
+				}
+			})
+		}
 
 	}
 
