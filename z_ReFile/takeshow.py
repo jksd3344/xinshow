@@ -89,65 +89,65 @@ class TakeShow(object):
 	
 		# 执行次数为日期之差
 		for i in range(difdays+1):
-			# days = datetime.timedelta(days=i)
-			# self.ShowDays = (Etime-days).strftime("%Y-%m-%d")
+			days = datetime.timedelta(days=i)
+			self.ShowDays = (Etime-days).strftime("%Y-%m-%d")
 
-			# talk="%s:success\n"%self.ShowDays
-			# print("talk=%s"%talk)
+			talk="%s:success\n"%self.ShowDays
+			print("talk=%s"%talk)
 
-			# if self.oid==["0"]:
-			# 	self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays))
-			# 	self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays))
-			# 	self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays))
-			# 	# self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
-			# 	# self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
-			# 	# self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+			if self.oid==["0"]:
+				self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays))
+				self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays))
+				self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays))
+				# self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+				# self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+				# self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
 
-			# 	cmdall={"cmd1":self.cmd1,"cmd2":self.cmd2,"cmd3":self.cmd3}
+				cmdall={"cmd1":self.cmd1,"cmd2":self.cmd2,"cmd3":self.cmd3}
 
 
-			# 	# 通过hostid确定执行的命令和主机ip
-			# 	if self.hostid==1:
-			# 		data={"ruleid":self.ruleid,"host":self.host1,"cmdall":cmdall,"uid":self.uid}
-			# 	elif self.hostid==2:
-			# 		data={"ruleid":self.ruleid,"host":self.host2,"cmdall":cmdall,"uid":self.uid}
-			# 	elif self.hostid==3:
-			# 		data={"ruleid":self.ruleid,"host":self.host3,"cmdall":cmdall,"uid":self.uid}
+				# 通过hostid确定执行的命令和主机ip
+				if self.hostid==1:
+					data={"ruleid":self.ruleid,"host":self.host1,"cmdall":cmdall,"uid":self.uid}
+				elif self.hostid==2:
+					data={"ruleid":self.ruleid,"host":self.host2,"cmdall":cmdall,"uid":self.uid}
+				elif self.hostid==3:
+					data={"ruleid":self.ruleid,"host":self.host3,"cmdall":cmdall,"uid":self.uid}
 
-			self.p.apply_async(ps, (0, ))
+				self.p.apply_async(rule_ac, (data, ))
 				
-		# 	else:
-		# 		for i in self.oid:
-		# 			self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(i))
-		# 			self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(i))
-		# 			self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(i))
-		# 			# self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
-		# 			# self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
-		# 			# self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+			else:
+				for i in self.oid:
+					self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(i))
+					self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(i))
+					self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(i))
+					# self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+					# self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+					# self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
 
-		# 			cmdall={"cmd1":self.cmd1,"cmd2":self.cmd2,"cmd3":self.cmd3}
+					cmdall={"cmd1":self.cmd1,"cmd2":self.cmd2,"cmd3":self.cmd3}
 
 
-		# 			# 通过hostid确定执行的命令和主机ip
+					# 通过hostid确定执行的命令和主机ip
 
-		# 			if self.hostid==1:
-		# 				data={"ruleid":self.ruleid,"host":self.host1,"cmdall":cmdall,"uid":self.uid}
-		# 			elif self.hostid==2:
-		# 				data={"ruleid":self.ruleid,"host":self.host2,"cmdall":cmdall,"uid":self.uid}
-		# 			elif self.hostid==3:
-		# 				data={"ruleid":self.ruleid,"host":self.host3,"cmdall":cmdall,"uid":self.uid}
+					if self.hostid==1:
+						data={"ruleid":self.ruleid,"host":self.host1,"cmdall":cmdall,"uid":self.uid}
+					elif self.hostid==2:
+						data={"ruleid":self.ruleid,"host":self.host2,"cmdall":cmdall,"uid":self.uid}
+					elif self.hostid==3:
+						data={"ruleid":self.ruleid,"host":self.host3,"cmdall":cmdall,"uid":self.uid}
 
-		# 			self.p.apply_async(rule_ac, (data, ))
+					self.p.apply_async(rule_ac, (data, ))
 
-		# 	com = db.execute(self.sqlcom)
-		# 	db_show.commit()
+			com = db.execute(self.sqlcom)
+			db_show.commit()
 
-		# wh=db.execute(self.sqlwh)
-		# db.close() 
+		wh=db.execute(self.sqlwh)
+		db.close() 
 
-		# self.p.close()
-		# self.p.join()
-		# talk="id:%s:--------End--------\n"%self.uid
+		self.p.close()
+		self.p.join()
+		talk="id:%s:--------End--------\n"%self.uid
 		print(talk)
 
 
@@ -162,10 +162,7 @@ class TakeShow(object):
 		print(sigtalk)
 
 
-def ps(x):
-	time.sleep(6)
-	print("kaishikehaha",x)
-	return 0
+
 def rule_ac(data):
 	print("pid=",os.getpid(),data.get("host",""))
 	rule_action(data.get("ruleid",""),data.get("host",""),data.get("cmdall",""),data.get("uid",""))
