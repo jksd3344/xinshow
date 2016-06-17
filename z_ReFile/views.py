@@ -12,9 +12,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 fs=feed_list()
 Pmsg=Pmsg()
-import logging
-logger = logging.getLogger('all_project')
-logger.info('aaa')
+
+# import logging
+# logger = logging.getLogger('all_project')
+# logger.info('aaa')
 
 
 class JsonRes(HttpResponse):
@@ -143,7 +144,7 @@ def takemassage(request):
 		str(ruleid),
 	])
 	print("cmd??=%s"%cmd)
-	logger.info('cmd=%s'%cmd)
+	# logger.info('cmd=%s'%cmd)
 	start=200
 	return JsonRes(json.dumps(start))
 
