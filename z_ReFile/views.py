@@ -129,8 +129,8 @@ def takemassage(request):
 	cmd = "python /home/itcast/0420text/djangoTest/xinshow/z_ReFile/takeshow.py %s %s %s %s %s %s %s"%(Stime.strftime("%Y-%m-%d"),Etime.strftime("%Y-%m-%d"),ucid,oid,userid,hostid,str(ruleid))
 	subprocess.Popen([
 		"python",
-		"/home/itcast/0420text/djantext/sxinshwo/xinshow/z_ReFile/takeshow.py",
-		# "/usr/local/apache2/htdocs/xinshow/z_ReFile/takeshow.py",
+		# "/home/itcast/0420text/djantext/sxinshwo/xinshow/z_ReFile/takeshow.py",
+		"/usr/local/apache2/htdocs/xinshow/z_ReFile/takeshow.py",
 		Stime.strftime("%Y-%m-%d"),
 		Etime.strftime("%Y-%m-%d"),
 		ucid,
