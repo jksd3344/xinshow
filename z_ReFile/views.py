@@ -104,9 +104,9 @@ def takemassage(request):
 	if ruleid==1:
 		usetime=usetime*2*len(oid)*2
 	elif ruleid==2:
-		usetime=usetime*3*len(oid)*2
+		usetime=usetime*3*len(oid)*1
 	elif ruleid==3:
-		usetime=usetime*3*len(oid)*2
+		usetime=usetime*3*len(oid)*3
 
 	#如果主机已到最高负载则错误
 	# hostid = Pmsg.Power_calculation(Power,hostnum=3)
