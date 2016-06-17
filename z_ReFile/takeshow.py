@@ -14,10 +14,9 @@ db_show = MySQLdb.connect(host="123.57.226.182",user="root",passwd="Jksd3344",db
 db = db_show.cursor()
 
 
-# import logging
-# import logging
-# log_file = "./basic_logger.log"
-# logging.basicConfig(filename = log_file, level = logging.DEBUG)
+import logging
+log_file = "./basic_logger.log"
+logging.basicConfig(filename = log_file, level = logging.DEBUG)
 
 
 class ruleid_sql(object):
@@ -102,7 +101,7 @@ class TakeShow(object):
 
 		talk="start________________________________________\n"
 		print("talk=%s"%talk)
-		# logging.info(talk)
+		logging.info(talk)
 
 		Stime    = datetime.datetime.strptime(self.Stime,"%Y-%m-%d")
 		Etime    = datetime.datetime.strptime(self.Etime,"%Y-%m-%d")
@@ -117,7 +116,7 @@ class TakeShow(object):
 
 			talk="%s:success\n"%self.ShowDays
 			print("talk=%s"%talk)
-			# logging.info(talk)
+			logging.info(talk)
 
 			if self.oid==["0"]:
 				self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays))
@@ -189,7 +188,7 @@ class TakeShow(object):
 def rule_ac(data):
 	pd="ruleid%s,host=%s,uid=%s"%(data.get("ruleid",""),data.get("host",""),data.get("uid",""))
 	print("pd=%s"%pd)
-	# logging.info(pd)
+	logging.info(pd)
 	rule_action(data.get("ruleid",""),data.get("host",""),data.get("cmdall",""),data.get("uid",""))
 
 
@@ -233,7 +232,7 @@ def remote_execute(hostmsg,ruleid,uid):
 	stdin,stdout,stderr = client.exec_command(hostmsg.get("cmd",""))
 	for i in stdout:
 		print("go=%s\n"%i)
-		# logging.info("stdout=%s"%i)
+		logging.info("stdout=%s"%i)
 
 	sqlcom=ruleid.take()
 	com = db.execute(sqlcom)

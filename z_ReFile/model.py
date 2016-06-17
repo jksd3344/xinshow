@@ -9,8 +9,8 @@ from math import ceil,floor
 from _models.models import feedgo
 db_show = MySQLdb.connect(host="123.57.226.182",user="root",passwd="Jksd3344",db="Shake",charset="utf8")   
 db = db_show.cursor()  
-import logging
-logger = logging.getLogger('all_project')
+# import logging
+# logger = logging.getLogger('all_project')
 
 class Pmsg(object):
 
@@ -44,7 +44,7 @@ class Pmsg(object):
 			comprogress=data.get("comprogress",""),
 			hostid=data.get("hostid","")
 			)
-		logger.info('data=%s'%data)
+		# logger.info('data=%s'%data)
 		return userid
 	
 	#遍历表
@@ -123,7 +123,7 @@ class Pmsg(object):
 		elif cmp(noweek,sweek)!=0 and cmp(noweek,eweek)==0:
 			self.ruleid=3
 			# 策略id为3 当时间跨周时 执行bin1，bin2,bin3 执行3个文件
-		logger.info('self.ruleid=%s'%self.ruleid)
+		# logger.info('self.ruleid=%s'%self.ruleid)
 		return self.ruleid
 
 
