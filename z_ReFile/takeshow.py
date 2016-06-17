@@ -71,12 +71,12 @@ class TakeShow(object):
 			self.hostid  = int((self.pat)[6])
 			self.ruleid   = int((self.pat)[7])
 			self.sqlwh   = self.sqlwh%(self.uid)
-			# self.host1   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
-			# self.host2   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
-			# self.host3   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
-			self.host1   = {"host_":"192.168.241.50","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
-			self.host2   = {"host_":"192.168.241.18","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
-			self.host3   = {"host_":"192.168.241.17","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
+			self.host1   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
+			self.host2   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
+			self.host3   = {"host_":"123.57.226.182","port_":22,"username":"root","password":"Jksd3344","cmd":""}
+			# self.host1   = {"host_":"192.168.241.50","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
+			# self.host2   = {"host_":"192.168.241.18","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
+			# self.host3   = {"host_":"192.168.241.17","port_":17717,"username":"zzg","password":"hZ4o7ZpG888","cmd":""}
 			if self.ruleid==1:
 				self.sqlcom = "update feedgo set comprogress=(comprogress+%s) where userid=%s"%("2",self.uid)
 			if self.ruleid==2:
@@ -114,12 +114,12 @@ class TakeShow(object):
 			print("talk=%s"%talk)
 
 			if self.oid==["0"]:
-				self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays))
-				self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays))
-				self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays))
-				# self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
-				# self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
-				# self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+				# self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays))
+				# self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays))
+				# self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays))
+				self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+				self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+				self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
 
 				cmdall={"cmd1":self.cmd1,"cmd2":self.cmd2,"cmd3":self.cmd3}
 
@@ -136,12 +136,12 @@ class TakeShow(object):
 				
 			else:
 				for i in self.oid:
-					self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(i))
-					self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(i))
-					self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(i))
-					# self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
-					# self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
-					# self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+					# self.cmd1= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin1,str(self.ucid),str(self.ShowDays),str(i))
+					# self.cmd2= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin2,str(self.ucid),str(self.ShowDays),str(i))
+					# self.cmd3= "cd %s;./adhoc_ctr_feeding 1 %s %s %s"%(self.bin3,str(self.ucid),str(self.ShowDays),str(i))
+					self.cmd1= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+					self.cmd2= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
+					self.cmd3= "cd /home/itcast/testy;./sleepTest.o %s %s %s"%(str(self.ucid),str(self.ShowDays),str(i))
 
 					cmdall={"cmd1":self.cmd1,"cmd2":self.cmd2,"cmd3":self.cmd3}
 
@@ -157,14 +157,15 @@ class TakeShow(object):
 
 					self.p.apply_async(rule_ac, (data, ))
 
-		wh=db.execute(self.sqlwh)
-		db.close() 
+
+
 
 		self.p.close()
 		self.p.join()
 		talk="id:%s:--------End--------\n"%self.uid
 		print(talk)
-
+		wh=db.execute(self.sqlwh)
+		db.close() 
 
 	'''信号阻断处理'''
 	def sig_show(self):
@@ -181,10 +182,6 @@ class TakeShow(object):
 def rule_ac(data):
 	print("pid=",os.getpid(),data.get("host",""))
 	rule_action(data.get("ruleid",""),data.get("host",""),data.get("cmdall",""),data.get("uid",""))
-	ruleid=ruleid_sql(data.get("uid",""),data.get("ruleid",""))
-	sqlcom=ruleid.take()
-	com = db.execute(sqlcom)
-	db_show.commit()
 
 
 
@@ -218,7 +215,7 @@ def rule_action(ruleid,host,cmdall,uid):
 def remote_execute(hostmsg,ruleid,uid):
 	talk=[];cmdtale="cmd=%s\n"%hostmsg.get("cmd","")
 	print(cmdtale)
-
+	ruleid=ruleid_sql(uid,ruleid)
 	client = paramiko.SSHClient()
 	client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 	client.connect(
@@ -231,6 +228,9 @@ def remote_execute(hostmsg,ruleid,uid):
 	for i in stdout:
 		print("go=%s\n"%i)
 
+	sqlcom=ruleid.take()
+	com = db.execute(sqlcom)
+	db_show.commit()
 	return stdout
 
 

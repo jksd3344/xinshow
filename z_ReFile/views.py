@@ -98,11 +98,11 @@ def takemassage(request):
 	# 获取规则id
 	ruleid=Pmsg.rule_calculation(st,et)
 	if ruleid==1:
-		usetime=usetime*2*3
+		usetime=usetime*2*len(oid)*2
 	elif ruleid==2:
-		usetime=usetime*3
+		usetime=usetime*3*len(oid)*2
 	elif ruleid==3:
-		usetime=usetime*3*3
+		usetime=usetime*3*len(oid)*2
 
 	#如果主机已到最高负载则错误
 	# hostid = Pmsg.Power_calculation(Power,hostnum=3)
@@ -129,8 +129,8 @@ def takemassage(request):
 	cmd = "python /home/itcast/0420text/djangoTest/xinshow/z_ReFile/takeshow.py %s %s %s %s %s %s %s"%(Stime.strftime("%Y-%m-%d"),Etime.strftime("%Y-%m-%d"),ucid,oid,userid,hostid,str(ruleid))
 	subprocess.Popen([
 		"python",
-		# "/home/itcast/0420text/djantext/sxinshwo/xinshow/z_ReFile/takeshow.py",
-		"/usr/local/apache2/htdocs/xinshow/z_ReFile/takeshow.py",
+		"/home/itcast/0420text/djantext/sxinshwo/xinshow/z_ReFile/takeshow.py",
+		# "/usr/local/apache2/htdocs/xinshow/z_ReFile/takeshow.py",
 		Stime.strftime("%Y-%m-%d"),
 		Etime.strftime("%Y-%m-%d"),
 		ucid,
